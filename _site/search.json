@@ -1,10 +1,18 @@
 [
   
     {
+      "title"    : "Game-of-Life",
+      "category" : "",
+      "tags"     : "Algorithm",
+      "url"      : "/2021/01/27/game-of-life/",
+      "date"     : "27 Jan, 2021"
+    } ,
+  
+    {
       "title"    : "Remove Duplicates from Sorted Array",
       "category" : "",
       "tags"     : "Algorithm",
-      "url"      : "/yerina/2021/01/18/find-a-connection-with-the-reader/",
+      "url"      : "/2021/01/18/find-a-connection-with-the-reader/",
       "date"     : "18 Jan, 2021"
     } ,
   
@@ -12,7 +20,7 @@
       "title"    : "Why a brand is often important",
       "category" : "",
       "tags"     : "Style",
-      "url"      : "/yerina/2018/07/19/why-a-brand-is-often-important/",
+      "url"      : "/2018/07/19/why-a-brand-is-often-important/",
       "date"     : "19 Jul, 2018"
     } ,
   
@@ -20,7 +28,7 @@
       "title"    : "Time to give gifts to everyone",
       "category" : "",
       "tags"     : "Life",
-      "url"      : "/yerina/2018/07/17/time-to-givegifts-to-everyone/",
+      "url"      : "/2018/07/17/time-to-givegifts-to-everyone/",
       "date"     : "17 Jul, 2018"
     } ,
   
@@ -28,7 +36,7 @@
       "title"    : "Moving to a new place",
       "category" : "",
       "tags"     : "Home",
-      "url"      : "/yerina/2018/07/05/moving-to-a-new-place/",
+      "url"      : "/2018/07/05/moving-to-a-new-place/",
       "date"     : "5 Jul, 2018"
     } ,
   
@@ -36,7 +44,7 @@
       "title"    : "Start the day with the right habit",
       "category" : "",
       "tags"     : "Style",
-      "url"      : "/yerina/2018/06/25/start-the-day-with-the-right-habit/",
+      "url"      : "/2018/06/25/start-the-day-with-the-right-habit/",
       "date"     : "25 Jun, 2018"
     } ,
   
@@ -44,7 +52,7 @@
       "title"    : "Welcome to Jekyll!",
       "category" : "",
       "tags"     : "Jekyll",
-      "url"      : "/yerina/2018/05/30/welcome-to-jekyll/",
+      "url"      : "/2018/05/30/welcome-to-jekyll/",
       "date"     : "30 May, 2018"
     } 
   

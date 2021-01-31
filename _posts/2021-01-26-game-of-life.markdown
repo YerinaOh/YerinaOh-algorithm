@@ -10,7 +10,9 @@ tags:   Algorithm
 ## Sorted Array 
 https://leetcode.com/problems/game-of-life/
 
- ### 주요내용: 이진배열 탐색하기
+
+### 주요내용: 
+이진배열 탐색하기
 
 ### Rule:
 1. 살아있는 이웃이 두 개 미만인 모든 살아있는 세포는 인구 부족으로 인한 것처럼 죽습니다.
@@ -21,6 +23,7 @@ https://leetcode.com/problems/game-of-life/
 ### 풀이법 (블로그 참고하였음)
 
 여기서 다음세대로 갈 때 변경되는 사항들은 아래와같이 정리.
+
 현재 죽음 - 다음 세대 생존 ⇒ 3
 현재 생존 - 다음 세대 죽음 ⇒ 2
 

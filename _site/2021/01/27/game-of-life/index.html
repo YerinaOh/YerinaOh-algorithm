@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Yerina</title>
+  <title>Game-of-Life</title>
   <meta name='description' content='iOS BLOG'>
 
-  <link rel="canonical" href="https://yerinaoh.github.io/page/2/">
+  <link rel="canonical" href="https://yerinaoh.github.io/2021/01/27/game-of-life/">
   <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
 
   <!-- Fonts -->
@@ -133,193 +133,207 @@
 
   <!-- begin content -->
   <main class="content" aria-label="Content">
-    <!-- begin c-hero -->
-<div class="hero">
-  <div class="container">
+    <div class="container">
+  <div class="post-title-box">
     <div class="row">
-      <div class="col col-6 col-t-12 last-item">
-        <div class="hero__content">
-          <h1 class="hero__title">Hello, I’m <strong>Yerina Oh</strong></h1>
-          <p class="hero__subtitle">Designs, talks, and writes about <strong>iOS Development</strong>, <strong>privacy</strong>, and Designs. <a href="# https://github.com/YerinaOh">GIT</a></p>
-          <div class="hero__social">
-            <span class="hero__social-title">Follow Me |</span>
-            <div class="contact">
-  <ul class="contact__list list-reset">
-    
-      <li><a href="https://twitter.com/"><i class="ion ion-logo-twitter"></i></a></li>
-    
+      <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
+        <span class="post__date">
+          <time datetime="2021-01-27T02:01:35+09:00">Jan 27, 2021</time>
+        </span>
 
-    
-      <li><a href="https://facebook.com/"><i class="ion ion-logo-facebook"></i></a></li>
-    
-  
-    
-      <li><a href="https://dribbble.com/"><i class="ion ion-logo-dribbble"></i></a></li>
-    
-  
-    
-      <li><a href="https://instagram.com/"><i class="ion ion-logo-instagram"></i></a></li>
-    
-  
-    
-      <li><a href="https://pinterest.com/"><i class="ion ion-logo-pinterest"></i></a></li>
-    
-  </ul>
-</div>
+        <h1 class="post-title">Game-of-Life</h1>
+
+        <div class="post__info">
+          <div class="post__author">
+            <span>By</span>
+            <a href="/about/" class="author-name">Yerina Oh</a>
           </div>
-        </div>
-      </div>
-      <div class="col col-6 col-t-12">
-        <div class="hero__image">
-          <img src="/images/011.jpg" alt="">
+
+          
+          <div class="post__tags">
+            
+              <a href="/tag/Algorithm" class="post__tags-tag">Algorithm</a>
+            
+          </div>
+          
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- end hero -->
 
-<div class="container">
-	<div class="row">
-		<div class="col col-12">
-			
-				<h4 class="lates-title">Latest Posts</h4>
-			
-		</div>
-	</div>
-</div>
+  
+  
+    <div class="post__head">
+      <div class="post-image" style="background-image: url(/images/02.jpg)"></div>
+    </div>
+  
 
-<div class="container">
-	<div class="row">
-	
-		
-			
-<!-- begin article -->
-<div class="article">
-  <div class="container">
-
-    <div class="article__wrapper">
-
-        
-          <a href="/2018/06/25/start-the-day-with-the-right-habit/" class="article__image" style="background-image: url(/images/06.jpg)">
-          </a>
-        
-
-        <div class="article__content ">
-          <div class="article-tags">
-          
-            <div class="article-tags__box">
-              
-                <a href="/tag/Style" class="article__tag">Style</a>
-              
-            </div>
-          
-          </div>
-      
-          <h2 class="article__title">
-            <a href="/2018/06/25/start-the-day-with-the-right-habit/">Start the day with the right habit</a>
-          </h2>
-      
-          <p class="article__excerpt">Yeah, and if you were the pope they’d be all, “Straighten your pope hat.” And “Put on your good vestments.” Noooooo! Perhaps, but perhaps your civilization is merely the sewer of an ...</p>
-          
-          <div class="article__footer">
-            <div class="article__meta">
-              <span class="article__date"><time datetime="2018-06-25T21:01:35+09:00">June 25, 2018</time></span>
-            </div>
-
-            <a href="/2018/06/25/start-the-day-with-the-right-habit/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-      
   </div>
-</div>
-<!-- end article -->
-		
-			
-<!-- begin article -->
-<div class="article">
+
+
   <div class="container">
+  <div class="row">
+    <!-- begin post -->
+    <article class="post  col col-8 col-t-10 col-m-12">
 
-    <div class="article__wrapper">
+      <div class="post__content">
+        <h2 id="sorted-array">Sorted Array</h2>
+<p>https://leetcode.com/problems/game-of-life/</p>
 
+<h3 id="주요내용">주요내용:</h3>
+<p>이진배열 탐색하기</p>
+
+<h3 id="rule">Rule:</h3>
+<ol>
+  <li>살아있는 이웃이 두 개 미만인 모든 살아있는 세포는 인구 부족으로 인한 것처럼 죽습니다.</li>
+  <li>2 ~ 3 명의 살아있는 이웃이있는 모든 살아있는 세포는 다음 세대를 위해 살아갑니다.</li>
+  <li>세 개 초과의 살아있는 이웃이있는 모든 살아있는 세포는 인구 과잉처럼 죽습니다.</li>
+  <li>정확히 세 개의 살아있는 이웃이있는 죽은 세포는 마치 번식에 의한 것처럼 살아있는 세포가됩니다.</li>
+</ol>
+
+<h3 id="풀이법-블로그-참고하였음">풀이법 (블로그 참고하였음)</h3>
+
+<p>여기서 다음세대로 갈 때 변경되는 사항들은 아래와같이 정리.</p>
+
+<p>현재 죽음 - 다음 세대 생존 ⇒ 3
+현재 생존 - 다음 세대 죽음 ⇒ 2</p>
+
+<p>Example1:
+Input: board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
+Output: [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]</p>
+
+<p>Example2:
+Input: board = [[1,1],[1,0]]
+Output: [[1,1],[1,1]]</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">UIKit</span>
+
+<span class="kd">class</span> <span class="kt">Solution</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">gameOfLife</span><span class="p">(</span><span class="n">_</span> <span class="nv">board</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]])</span> <span class="p">{</span> <span class="c1">// 2진배열 array</span>
+        <span class="k">guard</span> <span class="n">board</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
         
-          <a href="/2018/05/30/welcome-to-jekyll/" class="article__image" style="background-image: url(/images/10.jpg)">
-          </a>
+        <span class="k">let</span> <span class="nv">m</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">board</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">count</span>
         
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="n">m</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="n">n</span> <span class="p">{</span>
+                <span class="nf">changeStatus</span><span class="p">(</span><span class="o">&amp;</span><span class="n">board</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">board</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nv">$0</span> <span class="o">%</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">changeStatus</span><span class="p">(</span><span class="n">_</span> <span class="nv">board</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]],</span> <span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">j</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">population</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// next generation 의 값</span>
+    
+        <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">...</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">{</span> <span class="c1">// 앞의 값과 비교</span>
+            <span class="k">for</span> <span class="n">y</span> <span class="k">in</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="o">...</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">{</span> <span class="c1">// 위의 값과 비교</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">m</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="n">n</span> <span class="p">{</span> <span class="c1">// 모서리에 도달하면 contiunue</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="s">"i : </span><span class="se">\(</span><span class="n">i</span><span class="se">)</span><span class="s">, j : </span><span class="se">\(</span><span class="n">j</span><span class="se">)</span><span class="s">,x: </span><span class="se">\(</span><span class="n">x</span><span class="se">)</span><span class="s">,y: </span><span class="se">\(</span><span class="n">y</span><span class="se">)</span><span class="s">, popu:</span><span class="se">\(</span><span class="n">population</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+                    <span class="k">continue</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">i</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">==</span> <span class="n">j</span> <span class="p">{</span> <span class="c1">// 모서리에 도달하면 contiunue</span>
+                    <span class="k">continue</span>
+                <span class="p">}</span>
+                <span class="c1">// 조건 2 : pop이 1이거나 / 2 이면 상태를 변경, 나머지는 유지</span>
+                <span class="n">population</span> <span class="o">=</span> <span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">?</span> <span class="n">population</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">population</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span> <span class="c1">//현재 살아있는 상태</span>
+            <span class="c1">// 조건 1,3 : pop이 가뭄이거나 / 홍수이면 사망으로 설정, 나머지는 생존</span>
+            <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">population</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">population</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="p">?</span> <span class="mi">2</span> <span class="p">:</span> <span class="mi">1</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">//현재 죽어있는 상태</span>
+            <span class="c1">// 조건 4 : 3개의 이웃을 가지고있는 경우는 생존, 이외는 사망</span>
+            <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">population</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">?</span> <span class="mi">3</span> <span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-        <div class="article__content ">
-          <div class="article-tags">
-          
-            <div class="article-tags__box">
-              
-                <a href="/tag/Jekyll" class="article__tag">Jekyll</a>
-              
-            </div>
-          
-          </div>
-      
-          <h2 class="article__title">
-            <a href="/2018/05/30/welcome-to-jekyll/">Welcome to Jekyll!</a>
-          </h2>
-      
-          <p class="article__excerpt">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common w...</p>
-          
-          <div class="article__footer">
-            <div class="article__meta">
-              <span class="article__date"><time datetime="2018-05-30T00:05:55+09:00">May 30, 2018</time></span>
-            </div>
+<span class="k">let</span> <span class="nv">solution</span> <span class="o">=</span> <span class="kt">Solution</span><span class="o">.</span><span class="nf">init</span><span class="p">()</span>
+<span class="k">var</span> <span class="nv">board</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">solution</span><span class="o">.</span><span class="nf">gameOfLife</span><span class="p">(</span><span class="o">&amp;</span><span class="n">board</span><span class="p">)</span>
 
-            <a href="/2018/05/30/welcome-to-jekyll/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
-          </div>
-
-        </div>
+<span class="nf">print</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+</code></pre></div></div>
 
       </div>
-      
-  </div>
-</div>
-<!-- end article -->
-		
-	
-	</div>
-</div>
-<nav class="pagination">
-  <div class="container">
-    <div class="pagination__list">
 
-      
-      
-      
-        <a class="previous-link" href="/">Prev Posts</a>
-      
-      
-      
+      <div class="post__share">
+        <span class="share__title">Share this article:</span>
+        <ul class="share__list list-reset">
+          <li class="share__item">
+            <a class="share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://yerinaoh.github.io/2021/01/27/game-of-life/"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+          </li>
 
-      <div class="counter-box">
-        
-          <a href="/">1</a>
-        
+          <li class="share__item">
+            <a class="share__twitter" href="https://twitter.com/intent/tweet?text=Game-of-Life&url=https://yerinaoh.github.io/2021/01/27/game-of-life/"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+          </li>
 
+          <li class="share__item">
+            <a class="share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://yerinaoh.github.io/2021/01/27/game-of-life/&title=Game-of-Life&summary=&source="
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+          </li>
 
-        
-
-        
-          <span class="active-link">2</span>
-        
-        
+          <li class="share__item">
+            <a class="share__pinterest" href="http://pinterest.com/pin/create/button/?url=https://yerinaoh.github.io/2021/01/27/game-of-life/&amp;media=https://yerinaoh.github.io/images/02.jpg&amp;description=Game-of-Life"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
+              rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+          </li>
+        </ul>
       </div>
-
-      
-        <span class="disabled">Next Posts</span>
-      
-
-
+    </article>
+    <!-- end post -->
     </div>
   </div>
-</nav>
+
+  <div class="container">
+  <div class="post__navigation">
+    
+    <div class="prev">
+      <a class="post__nav__image" href="/2021/01/18/find-a-connection-with-the-reader/" style="background-image: url(/images/02.jpg)"></a>
+      <h2 class="post__nav__title">
+        <i class="ion ion-md-arrow-back"></i>
+        <a href="/2021/01/18/find-a-connection-with-the-reader/">Remove Duplicates from Sorted Array</a>
+      </h2>
+      <p class="prev__excerpt">
+        
+          Sorted Array
+
+Why not indeed!
+
+class RemoveDuplicatesFromSortedArray {
+    func removeDuplicates(inout nums...
+        
+      </p>
+    </div>
+    
+
+    
+  </div>
+
+   <!-- begin comments -->
+<div class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = '//mr-brown.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+</div>
+<!-- end comments --> 
+  </div>
 
   </main>
   <!-- end content -->
