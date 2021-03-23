@@ -2,7 +2,7 @@
 layout: post
 title:  Kadane’s Algorithm
 date:   2021-01-31 20:28:35 +0300
-image:  01.png
+image:  03.jpg
 tags:   Algorithm
 ---
 
