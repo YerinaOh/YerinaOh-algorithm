@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-{% include head.html %}
+  {% include head.html %}
 
-<body>
+  <body>
 
-  {% if site.data.settings.google-analytics %}
-  {% include google-analytics.html %}
-  {% endif %}
+    {% include header.html %}
 
-  {% include header.html %}
+    <div class="page-content">
+        {{ content }}
+    </div>
 
-  <!-- begin content -->
-  <main class="content" aria-label="Content">
-    {{ content }}
-  </main>
-  <!-- end content -->
+    {% include footer.html %}
 
-  <div class="top ion ion-ios-arrow-up" title="Top"></div>
-
-  {% include search.html %}
-
-  {% include footer.html %}
-
-  {% include javascripts.html %}
-</body>
+  </body>
 
 </html>

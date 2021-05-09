@@ -2,7 +2,8 @@
 layout: post
 title:  Array Partition
 date:   2021-04-04 23:12:10 +0300
-image:  08.jpg
+categories: Algorithm
+cover:  "/assets/08.jpg"
 tags:   Algorithm
 ---
 

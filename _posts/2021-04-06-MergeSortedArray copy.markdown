@@ -2,7 +2,8 @@
 layout: post
 title:  MergeSortedArray
 date:   2021-04-06 22:34:25 +0300
-image:  01.jpg
+categories: Algorithm
+cover:  "/assets/10.jpg"
 tags:   Algorithm
 ---
 

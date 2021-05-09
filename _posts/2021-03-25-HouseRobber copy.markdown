@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  HouseRobber
-date:   2021-03-25 23:29:35 +0300
-image:  03.jpg
+date:   2021-03-25 23:29:35
+categories: Algorithm
+cover:  "/assets/03.jpg"
 tags:   Algorithm
 ---
 

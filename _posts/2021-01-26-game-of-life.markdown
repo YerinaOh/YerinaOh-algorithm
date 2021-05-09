@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  Game-of-Life 
-date:   2021-01-26 20:01:35 +0300
-image:  03.jpg
+date:   2021-01-26 20:01:35
 tags:   Algorithm
+categories: Algorithm
+cover:  "/assets/03.jpg"
 ---
 
 

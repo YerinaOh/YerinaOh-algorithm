@@ -2,7 +2,8 @@
 layout: post
 title:  RotateImage
 date:   2021-04-05 22:38:54 +0300
-image:  09.jpg
+categories: Algorithm
+cover:  "/assets/09.jpg"
 tags:   Algorithm
 ---
 

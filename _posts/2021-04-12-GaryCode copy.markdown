@@ -2,7 +2,8 @@
 layout: post
 title:  GaryCode
 date:   2021-04-12 23:46:35 +0300
-image:  02.jpg
+categories: Algorithm
+cover:  "/assets/01.jpg"
 tags:   Algorithm
 ---
 

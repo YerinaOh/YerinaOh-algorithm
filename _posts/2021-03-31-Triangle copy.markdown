@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  Triangle
-date:   2021-03-31 23:10:35 +0300
-image:  06.jpg
+date:   2021-03-31 23:10:35
+categories: Algorithm
+cover:  "/assets/06.jpg"
 tags:   Algorithm
 ---
 

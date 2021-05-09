@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  Coin Change
-date:   2021-03-23 23:22:35 +0300
-image:  05.jpg
+date:   2021-03-23 23:22:35
+categories: Algorithm
+cover:  "/assets/05.jpg"
 tags:   Algorithm
 ---
 

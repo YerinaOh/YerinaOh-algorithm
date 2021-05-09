@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  Remove Duplicates from Sorted Array
-date:   2021-01-18 15:01:35 +0300
-image:  02.jpg
+date:   2021-01-18T15:01:35-05:00
 tags:   Algorithm
+categories: Algorithm
+cover:  "/assets/02.jpg"
 ---
 
 

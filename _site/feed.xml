@@ -6,19 +6,21 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 May 2021 01:23:57 +0900</pubDate>
-    <lastBuildDate>Mon, 10 May 2021 01:23:57 +0900</lastBuildDate>
+    <pubDate>Mon, 10 May 2021 01:25:01 +0900</pubDate>
+    <lastBuildDate>Mon, 10 May 2021 01:25:01 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
         <title>SimplifyPath</title>
         <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/wiggle-sort-ii/&lt;/p&gt; &lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;Stack 문제풀기&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;문자열 경로가 주어지면 이를 단순화 된 표준 경로로 변환하십시오.&lt;/p&gt; &lt;p&gt;Unix 파일 시스템에서 마침표 ‘.’ 현재 디렉토리를 나타내며, 이중 마침표 ‘..’는 한...</description>
         <pubDate>Sun, 09 May 2021 05:57:12 +0900</pubDate>
-        <link>http://localhost:4000/2021/05/09/SimplifyPath.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/05/09/SimplifyPath.html</guid>
+        <link>http://localhost:4000/algorithm/2021/05/09/SimplifyPath.html</link>
+        <guid isPermaLink="true">http://localhost:4000/algorithm/2021/05/09/SimplifyPath.html</guid>
         
         <category>Algorithm</category>
         
+        
+        <category>Algorithm</category>
         
       </item>
     

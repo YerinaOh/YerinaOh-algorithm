@@ -2,7 +2,8 @@
 layout: post
 title:  MaximumSubarray
 date:   2021-04-01 20:55:10 +0300
-image:  07.jpg
+categories: Algorithm
+cover:  "/assets/07.jpg"
 tags:   Algorithm
 ---
 

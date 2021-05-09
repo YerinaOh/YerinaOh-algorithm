@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  Heaters
-date:   2021-03-30 23:31:35 +0300
-image:  05.jpg
+date:   2021-03-30 23:31:35
+categories: Algorithm
+cover:  "/assets/05.jpg"
 tags:   Algorithm
 ---
 

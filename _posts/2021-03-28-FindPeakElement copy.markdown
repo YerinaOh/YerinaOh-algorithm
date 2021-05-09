@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  FindPeakElement
-date:   2021-03-28 23:19:35 +0300
-image:  04.jpg
+date:   2021-03-28 23:19:35
+categories: Algorithm
+cover:  "/assets/04.jpg"
 tags:   Algorithm
 ---
 

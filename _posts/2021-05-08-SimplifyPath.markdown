@@ -2,7 +2,8 @@
 layout: post
 title:  SimplifyPath
 date:   2021-05-08 23:57:12 +0300
-image:  07.jpg
+categories: Algorithm
+cover:  "/assets/06.jpg"
 tags:   Algorithm
 ---
 
