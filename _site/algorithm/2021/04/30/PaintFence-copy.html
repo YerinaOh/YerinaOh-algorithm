@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>longestCommonPrefix</title>
-  <meta name="description" content="URLhttps://leetcode.com/problems/longest-common-prefix/submissions/">
+  <title>PaintFence</title>
+  <meta name="description" content="URLhttps://leetcode.com/problems/paint-fence/">
   
-  <meta name="author" content="Ben Centra">
-  <meta name="copyright" content="&copy; Ben Centra 2021">
+  <meta name="author" content="Yerina Oh">
+  <meta name="copyright" content="&copy; Yerina Oh 2021">
   
 
   <!-- External libraries -->
@@ -41,12 +41,12 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="URLhttps://leetcode.com/problems/longest-common-prefix/submissions/" />
-  <meta property="og:url" content="http://localhost:4000/2021/05/04/longestCommonPrefix-copy.html">
-  <meta property="og:site_name" content="Centrarium" />
-  <meta property="og:title" content="longestCommonPrefix" />
+  <meta property="og:description" content="URLhttps://leetcode.com/problems/paint-fence/" />
+  <meta property="og:url" content="http://localhost:4000/algorithm/2021/04/30/PaintFence-copy.html">
+  <meta property="og:site_name" content="Hello, I’m Yerina Oh" />
+  <meta property="og:title" content="PaintFence" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image" content="http://localhost:4000/assets/10.jpg" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="612" />
   <meta property="og:image:height" content="605" />
@@ -55,18 +55,18 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="longestCommonPrefix">
-  <meta name="twitter:description" content="URLhttps://leetcode.com/problems/longest-common-prefix/submissions/">
-  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/2021/05/04/longestCommonPrefix-copy.html">
+  <meta name="twitter:title" content="PaintFence">
+  <meta name="twitter:description" content="URLhttps://leetcode.com/problems/paint-fence/">
+  <meta name="twitter:image" content="http://localhost:4000/assets/10.jpg">
+  <meta name="twitter:url" content="http://localhost:4000/algorithm/2021/04/30/PaintFence-copy.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2021/05/04/longestCommonPrefix-copy.html">
-	<link rel="alternate" type="application/rss+xml" title="Centrarium" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/algorithm/2021/04/30/PaintFence-copy.html">
+	<link rel="alternate" type="application/rss+xml" title="Hello, I’m Yerina Oh" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
 	<script type="text/javascript">
@@ -81,7 +81,7 @@
   <div class="navigation-wrapper">
     <a href="/" class="logo">
       
-      <img src="/assets/logo.png" alt="Centrarium">
+      <img src="/assets/logo.png" alt="Hello, I’m Yerina Oh">
       
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
@@ -146,10 +146,10 @@
     <div class="page-content">
         <div class="post">
 
-<div class="post-header-container " >
-  <div class="scrim ">
+<div class="post-header-container has-cover" style="background-image: url(/assets/10.jpg);">
+  <div class="scrim has-cover">
     <header class="post-header">
-      <h1 class="title">longestCommonPrefix</h1>
+      <h1 class="title">PaintFence</h1>
       <p class="info">by <strong></strong></p>
     </header>
   </div>
@@ -157,49 +157,80 @@
 
 <div class="wrapper">
 
- <span class="page-divider">
-  <span class="one"></span>
-  <span class="two"></span>
-</span>
- 
+
 
 <section class="post-meta">
-  <div class="post-date">May 4, 2021</div>
+  <div class="post-date">April 30, 2021</div>
   <div class="post-categories">
+  in 
+    
+    <a href="/category/Algorithm">Algorithm</a>
+    
   
   </div>
 </section>
 
 <article class="post-content">
   <h2 id="url">URL</h2>
-<p>https://leetcode.com/problems/longest-common-prefix/submissions/</p>
+<p>https://leetcode.com/problems/paint-fence/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>DP 문제풀기</p>
 
 <h3 id="rule">Rule:</h3>
-<p>서로 다른 문자열들이 공유하는 가장 긴 접두사를 찾기.</p>
+<p>n 개의 기둥이있는 울타리가 있으며 각 기둥은 k 색상 중 하나로 칠할 수 있습니다.
+인접한 두 개 이상의 울타리 기둥이 같은 색을 갖지 않도록 모든 기둥을 페인트해야합니다.
+울타리를 칠할 수있는 총 방법 수를 반환합니다.</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>n과 k는 0이상의 정수입니다. (마이너스가 아님!)</p>
 
 <h3 id="time-complexity">time complexity</h3>
 <p>O(n)</p>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="k">var</span> <span class="nv">longestCommonPrefix</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">strs</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">strs</span><span class="o">.</span><span class="n">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="err">''</span><span class="p">;</span>
-    <span class="k">let</span> <span class="nv">standard</span> <span class="o">=</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-    <span class="k">for</span><span class="p">(</span><span class="k">let</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">strs</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">let</span> <span class="nv">prefix</span> <span class="o">=</span> <span class="err">''</span>
-        <span class="k">while</span><span class="p">(</span><span class="n">standard</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">strs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">count</span><span class="p">])</span> <span class="p">{</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">standard</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">===</span> <span class="n">strs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">count</span><span class="p">])</span> <span class="p">{</span>
-                <span class="k">prefix</span> <span class="o">+=</span> <span class="n">standard</span><span class="p">[</span><span class="n">count</span><span class="p">];</span>
-                <span class="n">count</span><span class="o">++</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">prefix</span><span class="p">)</span> <span class="k">return</span> <span class="k">prefix</span><span class="p">;</span>
-                <span class="k">else</span> <span class="k">break</span><span class="p">;</span>
-            <span class="p">}</span>
+<h3 id="example">Example</h3>
+<p>Example 1:</p>
+
+<p>Input: n=3, k=2<br />
+Output: 6
+Explanation:
+          post 1,   post 2, post 3
+    way1    0         0       1 
+    way2    0         1       0
+    way3    0         1       1
+    way4    1         0       0
+    way5    1         0       1
+    way6    1         1       0
+Example 2:</p>
+
+<p>Input: n=2, k=2<br />
+Output: 4
+Explanation:
+          post 1,   post 2
+    way1    0         0     <br />
+    way2    0         1          <br />
+    way3    1         0        <br />
+    way4    1         1</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">PaintFence</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">numWays</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">k</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">0</span>
         <span class="p">}</span>
-        <span class="n">standard</span> <span class="o">=</span> <span class="k">prefix</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">k</span>
+        <span class="p">}</span>
+        
+        <span class="k">var</span> <span class="nv">lastSame</span> <span class="o">=</span> <span class="n">k</span>
+        <span class="k">var</span> <span class="nv">lastDiff</span> <span class="o">=</span> <span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">2</span><span class="o">..&lt;</span><span class="n">n</span> <span class="p">{</span>
+            <span class="p">(</span><span class="n">lastSame</span><span class="p">,</span> <span class="n">lastDiff</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">lastDiff</span><span class="p">,</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">lastSame</span> <span class="o">+</span> <span class="n">lastDiff</span><span class="p">))</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">lastSame</span> <span class="o">+</span> <span class="n">lastDiff</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">standard</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 </article>
@@ -221,7 +252,7 @@
   
     
     
-      <a href="//twitter.com/share?text=longestCommonPrefix&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F04%2FlongestCommonPrefix-copy.html&via=TheBenCentra"
+      <a href="//twitter.com/share?text=PaintFence&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F30%2FPaintFence-copy.html&via=YerinaOh"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
         <i class="fa fa-twitter-square fa-lg"></i>
       </a>
@@ -236,7 +267,7 @@
     
     
     
-      <a href="//www.facebook.com/sharer.php?t=longestCommonPrefix&u=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F04%2FlongestCommonPrefix-copy.html"
+      <a href="//www.facebook.com/sharer.php?t=PaintFence&u=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F30%2FPaintFence-copy.html"
         onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
         <i class="fa fa-facebook-square fa-lg"></i>
       </a>
@@ -261,7 +292,7 @@
     
     
     
-      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F04%2FlongestCommonPrefix-copy.html"
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F30%2FPaintFence-copy.html"
         onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
         <i class="fa fa-linkedin-square fa-lg"></i>
       </a>
@@ -274,7 +305,7 @@
     
     
     
-      <a href="//plus.google.com/share?title=longestCommonPrefix&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F04%2FlongestCommonPrefix-copy.html"
+      <a href="//plus.google.com/share?title=PaintFence&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F30%2FPaintFence-copy.html"
         onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
         <i class="fa fa-google-plus-square fa-lg"></i>
       </a>
@@ -308,7 +339,7 @@
     
     
     
-      <a href="//www.pinterest.com/pin/create/button/?description=longestCommonPrefix&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F04%2FlongestCommonPrefix-copy.html&media=http://localhost:4000/assets/header_image.jpg"
+      <a href="//www.pinterest.com/pin/create/button/?description=PaintFence&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F30%2FPaintFence-copy.html&media=http://localhost:4000/assets/10.jpg"
         onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
         <i class="fa fa-pinterest-square fa-lg"></i>
       </a>
@@ -377,7 +408,7 @@
     
     
     
-      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/2021/05/04/longestCommonPrefix-copy.html') + '&title=longestCommonPrefix'; return false">
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/algorithm/2021/04/30/PaintFence-copy.html') + '&title=PaintFence'; return false">
         <i class="fa fa-reddit-square fa-lg"></i>
       </a>
     
@@ -406,7 +437,7 @@
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">Centrarium</h3>
+    <h3 class="footer-heading">Hello, I’m Yerina Oh</h3>
 
     <div class="site-navigation">
 
@@ -468,18 +499,18 @@
       <p><strong>Contact</strong></p>
       <ul class="social-media-list">
         <li>
-          <a href="mailto:blcentra@gmail.com">
+          <a href="mailto:orina8262@gmail.com">
             <i class="fa fa-envelope-o"></i>
-            <span class="username">blcentra@gmail.com</span>
+            <span class="username">orina8262@gmail.com</span>
           </a>
         </li>
 
         
           
           <li>
-            <a href="https://twitter.com/TheBenCentra" title="Follow me on Twitter">
+            <a href="https://twitter.com/YerinaOh" title="Follow me on Twitter">
               <i class="fa fa-twitter"></i>
-              <span class="username">TheBenCentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -488,18 +519,18 @@
         
           
           <li>
-            <a href="https://github.com/bencentra" title="Fork me on GitHub">
+            <a href="https://github.com/YerinaOh" title="Fork me on GitHub">
               <i class="fa fa-github"></i>
-              <span class="username">bencentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
         
           
           <li>
-            <a href="https://www.linkedin.com/pub/ben-centra/47/769/60a" title="Connect with me on LinkedIn">
+            <a href="https://www.linkedin.com/pub/YerinaOh" title="Connect with me on LinkedIn">
               <i class="fa fa-linkedin"></i>
-              <span class="username">Ben Centra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -534,7 +565,7 @@
 
     <div class="site-signature">
       <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
-      <p class="text">A simple yet classy theme for your Jekyll website or blog.
+      <p class="text">talks, and writes about iOS Development, privacy, and Designs
 </p>
     </div>
 

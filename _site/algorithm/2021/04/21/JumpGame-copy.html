@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>WiggleSortII</title>
-  <meta name="description" content="URLhttps://leetcode.com/problems/wiggle-sort-ii/">
+  <title>JumpGame</title>
+  <meta name="description" content="URLhttps://leetcode.com/problems/jump-game/">
   
-  <meta name="author" content="Ben Centra">
-  <meta name="copyright" content="&copy; Ben Centra 2021">
+  <meta name="author" content="Yerina Oh">
+  <meta name="copyright" content="&copy; Yerina Oh 2021">
   
 
   <!-- External libraries -->
@@ -41,12 +41,12 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="URLhttps://leetcode.com/problems/wiggle-sort-ii/" />
-  <meta property="og:url" content="http://localhost:4000/2021/05/06/WiggleSortII-copy-2.html">
-  <meta property="og:site_name" content="Centrarium" />
-  <meta property="og:title" content="WiggleSortII" />
+  <meta property="og:description" content="URLhttps://leetcode.com/problems/jump-game/" />
+  <meta property="og:url" content="http://localhost:4000/algorithm/2021/04/21/JumpGame-copy.html">
+  <meta property="og:site_name" content="Hello, I’m Yerina Oh" />
+  <meta property="og:title" content="JumpGame" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image" content="http://localhost:4000/assets/06.jpg" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="612" />
   <meta property="og:image:height" content="605" />
@@ -55,18 +55,18 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="WiggleSortII">
-  <meta name="twitter:description" content="URLhttps://leetcode.com/problems/wiggle-sort-ii/">
-  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/2021/05/06/WiggleSortII-copy-2.html">
+  <meta name="twitter:title" content="JumpGame">
+  <meta name="twitter:description" content="URLhttps://leetcode.com/problems/jump-game/">
+  <meta name="twitter:image" content="http://localhost:4000/assets/06.jpg">
+  <meta name="twitter:url" content="http://localhost:4000/algorithm/2021/04/21/JumpGame-copy.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2021/05/06/WiggleSortII-copy-2.html">
-	<link rel="alternate" type="application/rss+xml" title="Centrarium" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/algorithm/2021/04/21/JumpGame-copy.html">
+	<link rel="alternate" type="application/rss+xml" title="Hello, I’m Yerina Oh" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
 	<script type="text/javascript">
@@ -81,7 +81,7 @@
   <div class="navigation-wrapper">
     <a href="/" class="logo">
       
-      <img src="/assets/logo.png" alt="Centrarium">
+      <img src="/assets/logo.png" alt="Hello, I’m Yerina Oh">
       
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
@@ -146,10 +146,10 @@
     <div class="page-content">
         <div class="post">
 
-<div class="post-header-container " >
-  <div class="scrim ">
+<div class="post-header-container has-cover" style="background-image: url(/assets/06.jpg);">
+  <div class="scrim has-cover">
     <header class="post-header">
-      <h1 class="title">WiggleSortII</h1>
+      <h1 class="title">JumpGame</h1>
       <p class="info">by <strong></strong></p>
     </header>
   </div>
@@ -157,64 +157,64 @@
 
 <div class="wrapper">
 
- <span class="page-divider">
-  <span class="one"></span>
-  <span class="two"></span>
-</span>
- 
+
 
 <section class="post-meta">
-  <div class="post-date">May 6, 2021</div>
+  <div class="post-date">April 21, 2021</div>
   <div class="post-categories">
+  in 
+    
+    <a href="/category/Algorithm">Algorithm</a>
+    
   
   </div>
 </section>
 
 <article class="post-content">
   <h2 id="url">URL</h2>
-<p>https://leetcode.com/problems/wiggle-sort-ii/</p>
+<p>https://leetcode.com/problems/jump-game/</p>
 
 <h3 id="주요내용">주요내용:</h3>
-<p>Sort 문제풀기</p>
+<p>DP 문제풀기</p>
 
 <h3 id="rule">Rule:</h3>
-<p>정수 배열 nums가 주어지면 nums [0] &lt;nums [1]&gt; nums [2] &lt;nums [3] ….이되도록 재정렬하십시오.</p>
+<p>그니까 이게.. 개구리가 점프 가능한지 bool 값으로 return 하라는건데 내용은 이렇구먼..
+음이 아닌 정수 숫자의 배열이 주어지면 처음에 배열의 첫 번째 인덱스에 배치됩니다.
+배열의 각 요소는 해당 위치에서 최대 점프 길이를 나타냅니다.
+마지막 INDEX에 도달 할 수 있는지 확인하십시오.</p>
 
 <h3 id="constraints">Constraints:</h3>
-<p>1 &lt;= nums.length &lt;= 5 * 104
-0 &lt;= nums[i] &lt;= 5000</p>
+<p>1 &lt;= nums.length &lt;= 3 * 104
+0 &lt;= nums[i] &lt;= 105</p>
 
 <h3 id="time-complexity">time complexity</h3>
-<p>O(nlogn)</p>
+<p>O(n)</p>
 
 <h3 id="example">Example</h3>
-<p>Example 1:</p>
+<p>Example 1:
+Input: nums = [2,3,1,1,4]
+Output: true
+Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.</p>
 
-<p>Input: nums = [1,5,1,1,6,4]
-Output: [1,6,1,5,1,4]
-Explanation: [1,4,1,5,1,6] is also accepted.
-Example 2:</p>
+<p>Example 2:
+Input: nums = [3,2,1,0,4]
+Output: false
+Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.</p>
 
-<p>Input: nums = [1,3,2,2,3,1]
-Output: [2,3,1,3,1,2]</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kd">class</span> <span class="kt">WiggleSortII</span> <span class="p">{</span>
-    <span class="kd">func</span> <span class="nf">wiggleSort</span><span class="p">(</span><span class="n">_</span> <span class="nv">nums</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">temp</span> <span class="o">=</span> <span class="n">nums</span><span class="o">.</span><span class="nf">sorted</span><span class="p">()</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">JumpGame</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">canJump</span><span class="p">(</span><span class="n">_</span> <span class="nv">nums</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">maximumIndex</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         
-        <span class="k">var</span> <span class="nv">m</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">count</span>
-        <span class="k">var</span> <span class="nv">n</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-        
-        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="n">nums</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-                <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">m</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
-                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">currentIndex</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="n">nums</span><span class="o">.</span><span class="nf">enumerated</span><span class="p">(){</span>
+            
+            <span class="k">if</span> <span class="n">currentIndex</span> <span class="o">&gt;</span> <span class="n">maximumIndex</span><span class="p">{</span>
+                <span class="k">return</span> <span class="kc">false</span>
             <span class="p">}</span>
+            
+            <span class="n">maximumIndex</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">maximumIndex</span><span class="p">,</span> <span class="n">currentIndex</span> <span class="o">+</span> <span class="n">value</span><span class="p">)</span>
         <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="kc">true</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -238,7 +238,7 @@ Output: [2,3,1,3,1,2]</p>
   
     
     
-      <a href="//twitter.com/share?text=WiggleSortII&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F06%2FWiggleSortII-copy-2.html&via=TheBenCentra"
+      <a href="//twitter.com/share?text=JumpGame&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F21%2FJumpGame-copy.html&via=YerinaOh"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
         <i class="fa fa-twitter-square fa-lg"></i>
       </a>
@@ -253,7 +253,7 @@ Output: [2,3,1,3,1,2]</p>
     
     
     
-      <a href="//www.facebook.com/sharer.php?t=WiggleSortII&u=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F06%2FWiggleSortII-copy-2.html"
+      <a href="//www.facebook.com/sharer.php?t=JumpGame&u=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F21%2FJumpGame-copy.html"
         onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
         <i class="fa fa-facebook-square fa-lg"></i>
       </a>
@@ -278,7 +278,7 @@ Output: [2,3,1,3,1,2]</p>
     
     
     
-      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F06%2FWiggleSortII-copy-2.html"
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F21%2FJumpGame-copy.html"
         onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
         <i class="fa fa-linkedin-square fa-lg"></i>
       </a>
@@ -291,7 +291,7 @@ Output: [2,3,1,3,1,2]</p>
     
     
     
-      <a href="//plus.google.com/share?title=WiggleSortII&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F06%2FWiggleSortII-copy-2.html"
+      <a href="//plus.google.com/share?title=JumpGame&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F21%2FJumpGame-copy.html"
         onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
         <i class="fa fa-google-plus-square fa-lg"></i>
       </a>
@@ -325,7 +325,7 @@ Output: [2,3,1,3,1,2]</p>
     
     
     
-      <a href="//www.pinterest.com/pin/create/button/?description=WiggleSortII&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F06%2FWiggleSortII-copy-2.html&media=http://localhost:4000/assets/header_image.jpg"
+      <a href="//www.pinterest.com/pin/create/button/?description=JumpGame&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F21%2FJumpGame-copy.html&media=http://localhost:4000/assets/06.jpg"
         onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
         <i class="fa fa-pinterest-square fa-lg"></i>
       </a>
@@ -394,7 +394,7 @@ Output: [2,3,1,3,1,2]</p>
     
     
     
-      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/2021/05/06/WiggleSortII-copy-2.html') + '&title=WiggleSortII'; return false">
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/algorithm/2021/04/21/JumpGame-copy.html') + '&title=JumpGame'; return false">
         <i class="fa fa-reddit-square fa-lg"></i>
       </a>
     
@@ -423,7 +423,7 @@ Output: [2,3,1,3,1,2]</p>
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">Centrarium</h3>
+    <h3 class="footer-heading">Hello, I’m Yerina Oh</h3>
 
     <div class="site-navigation">
 
@@ -485,18 +485,18 @@ Output: [2,3,1,3,1,2]</p>
       <p><strong>Contact</strong></p>
       <ul class="social-media-list">
         <li>
-          <a href="mailto:blcentra@gmail.com">
+          <a href="mailto:orina8262@gmail.com">
             <i class="fa fa-envelope-o"></i>
-            <span class="username">blcentra@gmail.com</span>
+            <span class="username">orina8262@gmail.com</span>
           </a>
         </li>
 
         
           
           <li>
-            <a href="https://twitter.com/TheBenCentra" title="Follow me on Twitter">
+            <a href="https://twitter.com/YerinaOh" title="Follow me on Twitter">
               <i class="fa fa-twitter"></i>
-              <span class="username">TheBenCentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -505,18 +505,18 @@ Output: [2,3,1,3,1,2]</p>
         
           
           <li>
-            <a href="https://github.com/bencentra" title="Fork me on GitHub">
+            <a href="https://github.com/YerinaOh" title="Fork me on GitHub">
               <i class="fa fa-github"></i>
-              <span class="username">bencentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
         
           
           <li>
-            <a href="https://www.linkedin.com/pub/ben-centra/47/769/60a" title="Connect with me on LinkedIn">
+            <a href="https://www.linkedin.com/pub/YerinaOh" title="Connect with me on LinkedIn">
               <i class="fa fa-linkedin"></i>
-              <span class="username">Ben Centra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -551,7 +551,7 @@ Output: [2,3,1,3,1,2]</p>
 
     <div class="site-signature">
       <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
-      <p class="text">A simple yet classy theme for your Jekyll website or blog.
+      <p class="text">talks, and writes about iOS Development, privacy, and Designs
 </p>
     </div>
 

@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>TwoSumLessThanK</title>
-  <meta name="description" content="URLhttps://leetcode.com/problems/two-sum-less-than-k/">
+  <title>Arrange--</title>
+  <meta name="description" content="주요내용:알고리즘 풀기 목적이었으나.. 지금은 정리가 필요할 때">
   
-  <meta name="author" content="Ben Centra">
-  <meta name="copyright" content="&copy; Ben Centra 2021">
+  <meta name="author" content="Yerina Oh">
+  <meta name="copyright" content="&copy; Yerina Oh 2021">
   
 
   <!-- External libraries -->
@@ -41,12 +41,12 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="URLhttps://leetcode.com/problems/two-sum-less-than-k/" />
-  <meta property="og:url" content="http://localhost:4000/2021/05/03/TwoSumLessThanK-copy.html">
-  <meta property="og:site_name" content="Centrarium" />
-  <meta property="og:title" content="TwoSumLessThanK" />
+  <meta property="og:description" content="주요내용:알고리즘 풀기 목적이었으나.. 지금은 정리가 필요할 때" />
+  <meta property="og:url" content="http://localhost:4000/algorithm/2021/05/07/Arrange.html">
+  <meta property="og:site_name" content="Hello, I’m Yerina Oh" />
+  <meta property="og:title" content="Arrange--" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image" content="http://localhost:4000/assets/05.jpg" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="612" />
   <meta property="og:image:height" content="605" />
@@ -55,18 +55,18 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="TwoSumLessThanK">
-  <meta name="twitter:description" content="URLhttps://leetcode.com/problems/two-sum-less-than-k/">
-  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/2021/05/03/TwoSumLessThanK-copy.html">
+  <meta name="twitter:title" content="Arrange--">
+  <meta name="twitter:description" content="주요내용:알고리즘 풀기 목적이었으나.. 지금은 정리가 필요할 때">
+  <meta name="twitter:image" content="http://localhost:4000/assets/05.jpg">
+  <meta name="twitter:url" content="http://localhost:4000/algorithm/2021/05/07/Arrange.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2021/05/03/TwoSumLessThanK-copy.html">
-	<link rel="alternate" type="application/rss+xml" title="Centrarium" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/algorithm/2021/05/07/Arrange.html">
+	<link rel="alternate" type="application/rss+xml" title="Hello, I’m Yerina Oh" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
 	<script type="text/javascript">
@@ -81,7 +81,7 @@
   <div class="navigation-wrapper">
     <a href="/" class="logo">
       
-      <img src="/assets/logo.png" alt="Centrarium">
+      <img src="/assets/logo.png" alt="Hello, I’m Yerina Oh">
       
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
@@ -146,10 +146,10 @@
     <div class="page-content">
         <div class="post">
 
-<div class="post-header-container " >
-  <div class="scrim ">
+<div class="post-header-container has-cover" style="background-image: url(/assets/05.jpg);">
+  <div class="scrim has-cover">
     <header class="post-header">
-      <h1 class="title">TwoSumLessThanK</h1>
+      <h1 class="title">Arrange--</h1>
       <p class="info">by <strong></strong></p>
     </header>
   </div>
@@ -157,67 +157,31 @@
 
 <div class="wrapper">
 
- <span class="page-divider">
-  <span class="one"></span>
-  <span class="two"></span>
-</span>
- 
+
 
 <section class="post-meta">
-  <div class="post-date">May 3, 2021</div>
+  <div class="post-date">May 7, 2021</div>
   <div class="post-categories">
+  in 
+    
+    <a href="/category/Algorithm">Algorithm</a>
+    
   
   </div>
 </section>
 
 <article class="post-content">
-  <h2 id="url">URL</h2>
-<p>https://leetcode.com/problems/two-sum-less-than-k/</p>
-
-<h3 id="주요내용">주요내용:</h3>
-<p>ARRAY 문제풀기</p>
-
-<h3 id="rule">Rule:</h3>
-<p>정수 배열 A와 정수 K가 주어지면 A [i] + A [j] = S 및 S &lt;K 인 i &lt;j가 존재하도록 최대 S를 반환합니다.</p>
+  <h3 id="주요내용">주요내용:</h3>
+<p>알고리즘 풀기 목적이었으나.. 지금은 정리가 필요할 때</p>
 
 <h3 id="time-complexity">time complexity</h3>
-<p>O(n)</p>
+<p>Sort - O(nlogn)
+Array - O(n)
+DP - O(n)</p>
 
-<h3 id="example">Example</h3>
-<p>Example 1:</p>
-
-<p>Input: A = [34,23,1,24,75,33,54,8], K = 60
-Output: 58
-Explanation: 
-We can use 34 and 24 to sum 58 which is less than 60.</p>
-
-<p>Example 2:</p>
-
-<p>Input: A = [10,20,30], K = 15
-Output: -1
-Explanation: 
-In this case it’s not possible to get a pair sum less that 15.</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kd">class</span> <span class="kt">TwoSumLessThanK</span> <span class="p">{</span>
-    <span class="kd">func</span> <span class="nf">twoSumLessThanK</span><span class="p">(</span><span class="n">_</span> <span class="kt">A</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="n">_</span> <span class="kt">K</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">sortedA</span> <span class="o">=</span> <span class="kt">A</span><span class="o">.</span><span class="nf">sorted</span><span class="p">()</span>
-        <span class="k">var</span> <span class="nv">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">sortedA</span><span class="o">.</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="k">var</span> <span class="nv">closest</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-        
-        <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="n">sortedA</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">+</span> <span class="n">sortedA</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">&lt;</span> <span class="kt">K</span> <span class="p">{</span>
-                <span class="n">closest</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">sortedA</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">+</span> <span class="n">sortedA</span><span class="p">[</span><span class="n">right</span><span class="p">],</span> <span class="n">closest</span><span class="p">)</span>
-                <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        
-        <span class="k">return</span> <span class="n">closest</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<p>Sort - 재귀 , 병렬 loop 사용. quick sort 는 어렵지만 bubble, swap 이용하여 풀기
+Array - loop 로 푸는편 index 값 비교하기
+DP - 점화식 세우는 것이 가장 중요. index 값 비교하기</p>
 
 </article>
 
@@ -238,7 +202,7 @@ In this case it’s not possible to get a pair sum less that 15.</p>
   
     
     
-      <a href="//twitter.com/share?text=TwoSumLessThanK&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F03%2FTwoSumLessThanK-copy.html&via=TheBenCentra"
+      <a href="//twitter.com/share?text=Arrange--&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F05%2F07%2FArrange.html&via=YerinaOh"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
         <i class="fa fa-twitter-square fa-lg"></i>
       </a>
@@ -253,7 +217,7 @@ In this case it’s not possible to get a pair sum less that 15.</p>
     
     
     
-      <a href="//www.facebook.com/sharer.php?t=TwoSumLessThanK&u=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F03%2FTwoSumLessThanK-copy.html"
+      <a href="//www.facebook.com/sharer.php?t=Arrange--&u=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F05%2F07%2FArrange.html"
         onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
         <i class="fa fa-facebook-square fa-lg"></i>
       </a>
@@ -278,7 +242,7 @@ In this case it’s not possible to get a pair sum less that 15.</p>
     
     
     
-      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F03%2FTwoSumLessThanK-copy.html"
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F05%2F07%2FArrange.html"
         onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
         <i class="fa fa-linkedin-square fa-lg"></i>
       </a>
@@ -291,7 +255,7 @@ In this case it’s not possible to get a pair sum less that 15.</p>
     
     
     
-      <a href="//plus.google.com/share?title=TwoSumLessThanK&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F03%2FTwoSumLessThanK-copy.html"
+      <a href="//plus.google.com/share?title=Arrange--&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F05%2F07%2FArrange.html"
         onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
         <i class="fa fa-google-plus-square fa-lg"></i>
       </a>
@@ -325,7 +289,7 @@ In this case it’s not possible to get a pair sum less that 15.</p>
     
     
     
-      <a href="//www.pinterest.com/pin/create/button/?description=TwoSumLessThanK&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F05%2F03%2FTwoSumLessThanK-copy.html&media=http://localhost:4000/assets/header_image.jpg"
+      <a href="//www.pinterest.com/pin/create/button/?description=Arrange--&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F05%2F07%2FArrange.html&media=http://localhost:4000/assets/05.jpg"
         onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
         <i class="fa fa-pinterest-square fa-lg"></i>
       </a>
@@ -394,7 +358,7 @@ In this case it’s not possible to get a pair sum less that 15.</p>
     
     
     
-      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/2021/05/03/TwoSumLessThanK-copy.html') + '&title=TwoSumLessThanK'; return false">
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/algorithm/2021/05/07/Arrange.html') + '&title=Arrange--'; return false">
         <i class="fa fa-reddit-square fa-lg"></i>
       </a>
     
@@ -423,7 +387,7 @@ In this case it’s not possible to get a pair sum less that 15.</p>
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">Centrarium</h3>
+    <h3 class="footer-heading">Hello, I’m Yerina Oh</h3>
 
     <div class="site-navigation">
 
@@ -485,18 +449,18 @@ In this case it’s not possible to get a pair sum less that 15.</p>
       <p><strong>Contact</strong></p>
       <ul class="social-media-list">
         <li>
-          <a href="mailto:blcentra@gmail.com">
+          <a href="mailto:orina8262@gmail.com">
             <i class="fa fa-envelope-o"></i>
-            <span class="username">blcentra@gmail.com</span>
+            <span class="username">orina8262@gmail.com</span>
           </a>
         </li>
 
         
           
           <li>
-            <a href="https://twitter.com/TheBenCentra" title="Follow me on Twitter">
+            <a href="https://twitter.com/YerinaOh" title="Follow me on Twitter">
               <i class="fa fa-twitter"></i>
-              <span class="username">TheBenCentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -505,18 +469,18 @@ In this case it’s not possible to get a pair sum less that 15.</p>
         
           
           <li>
-            <a href="https://github.com/bencentra" title="Fork me on GitHub">
+            <a href="https://github.com/YerinaOh" title="Fork me on GitHub">
               <i class="fa fa-github"></i>
-              <span class="username">bencentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
         
           
           <li>
-            <a href="https://www.linkedin.com/pub/ben-centra/47/769/60a" title="Connect with me on LinkedIn">
+            <a href="https://www.linkedin.com/pub/YerinaOh" title="Connect with me on LinkedIn">
               <i class="fa fa-linkedin"></i>
-              <span class="username">Ben Centra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -551,7 +515,7 @@ In this case it’s not possible to get a pair sum less that 15.</p>
 
     <div class="site-signature">
       <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
-      <p class="text">A simple yet classy theme for your Jekyll website or blog.
+      <p class="text">talks, and writes about iOS Development, privacy, and Designs
 </p>
     </div>
 

@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>MoveZeroes</title>
-  <meta name="description" content="URLhttps://leetcode.com/problems/move-zeroes/">
+  <title>TwoSum</title>
+  <meta name="description" content="URLhttps://leetcode.com/problems/two-sum/">
   
-  <meta name="author" content="Ben Centra">
-  <meta name="copyright" content="&copy; Ben Centra 2021">
+  <meta name="author" content="Yerina Oh">
+  <meta name="copyright" content="&copy; Yerina Oh 2021">
   
 
   <!-- External libraries -->
@@ -41,12 +41,12 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="URLhttps://leetcode.com/problems/move-zeroes/" />
-  <meta property="og:url" content="http://localhost:4000/2021/04/25/MoveZeroes-copy.html">
-  <meta property="og:site_name" content="Centrarium" />
-  <meta property="og:title" content="MoveZeroes" />
+  <meta property="og:description" content="URLhttps://leetcode.com/problems/two-sum/" />
+  <meta property="og:url" content="http://localhost:4000/algorithm/2021/04/23/TwoSum.html">
+  <meta property="og:site_name" content="Hello, I’m Yerina Oh" />
+  <meta property="og:title" content="TwoSum" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image" content="http://localhost:4000/assets/07.jpg" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="612" />
   <meta property="og:image:height" content="605" />
@@ -55,18 +55,18 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="MoveZeroes">
-  <meta name="twitter:description" content="URLhttps://leetcode.com/problems/move-zeroes/">
-  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/2021/04/25/MoveZeroes-copy.html">
+  <meta name="twitter:title" content="TwoSum">
+  <meta name="twitter:description" content="URLhttps://leetcode.com/problems/two-sum/">
+  <meta name="twitter:image" content="http://localhost:4000/assets/07.jpg">
+  <meta name="twitter:url" content="http://localhost:4000/algorithm/2021/04/23/TwoSum.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2021/04/25/MoveZeroes-copy.html">
-	<link rel="alternate" type="application/rss+xml" title="Centrarium" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/algorithm/2021/04/23/TwoSum.html">
+	<link rel="alternate" type="application/rss+xml" title="Hello, I’m Yerina Oh" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
 	<script type="text/javascript">
@@ -81,7 +81,7 @@
   <div class="navigation-wrapper">
     <a href="/" class="logo">
       
-      <img src="/assets/logo.png" alt="Centrarium">
+      <img src="/assets/logo.png" alt="Hello, I’m Yerina Oh">
       
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
@@ -146,10 +146,10 @@
     <div class="page-content">
         <div class="post">
 
-<div class="post-header-container " >
-  <div class="scrim ">
+<div class="post-header-container has-cover" style="background-image: url(/assets/07.jpg);">
+  <div class="scrim has-cover">
     <header class="post-header">
-      <h1 class="title">MoveZeroes</h1>
+      <h1 class="title">TwoSum</h1>
       <p class="info">by <strong></strong></p>
     </header>
   </div>
@@ -157,33 +157,34 @@
 
 <div class="wrapper">
 
- <span class="page-divider">
-  <span class="one"></span>
-  <span class="two"></span>
-</span>
- 
+
 
 <section class="post-meta">
-  <div class="post-date">April 25, 2021</div>
+  <div class="post-date">April 23, 2021</div>
   <div class="post-categories">
+  in 
+    
+    <a href="/category/Algorithm">Algorithm</a>
+    
   
   </div>
 </section>
 
 <article class="post-content">
   <h2 id="url">URL</h2>
-<p>https://leetcode.com/problems/move-zeroes/</p>
+<p>https://leetcode.com/problems/two-sum/</p>
 
 <h3 id="주요내용">주요내용:</h3>
 <p>ARRAY 문제풀기</p>
 
 <h3 id="rule">Rule:</h3>
-<p>정수 배열 번호가 주어지면 0이 아닌 요소의 상대적 순서를 유지하면서 
-모두 0을 끝으로 이동합니다.</p>
+<p>정수 nums의 배열과 정수 대상이 주어지면 대상에 합산되도록 두 숫자의 인덱스를 반환합니다.
+각 입력에 정확히 하나의 솔루션이 있다고 가정 할 수 있으며 동일한 요소를 두 번 사용할 수 없습니다.</p>
 
 <h3 id="constraints">Constraints:</h3>
-<p>1 &lt;= nums.length &lt;= 104
--231 &lt;= nums[i] &lt;= 231 - 1</p>
+<p>2 &lt;= nums.length &lt;= 103
+-109 &lt;= nums[i] &lt;= 109
+-109 &lt;= target &lt;= 109</p>
 
 <h3 id="time-complexity">time complexity</h3>
 <p>O(n)</p>
@@ -191,26 +192,31 @@
 <h3 id="example">Example</h3>
 <p>Example 1:</p>
 
-<p>Input: nums = [0,1,0,3,12]
-Output: [1,3,12,0,0]
+<p>Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 Example 2:</p>
 
-<p>Input: nums = [0]
-Output: [0]</p>
+<p>Input: nums = [3,2,4], target = 6
+Output: [1,2]
+Example 3:</p>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">MoveZeroes</span> <span class="p">{</span>
-    <span class="kd">func</span> <span class="nf">moveZeroes</span><span class="p">(</span><span class="n">_</span> <span class="nv">nums</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="p">{</span>
-        <span class="k">var</span> <span class="nv">nonZeroIdx</span> <span class="o">=</span> <span class="mi">0</span>
-        
-        <span class="k">for</span> <span class="n">num</span> <span class="k">in</span> <span class="n">nums</span> <span class="k">where</span> <span class="n">num</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
-            <span class="n">nums</span><span class="p">[</span><span class="n">nonZeroIdx</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span>
-            <span class="n">nonZeroIdx</span> <span class="o">+=</span> <span class="mi">1</span>
+<p>Input: nums = [3,3], target = 6
+Output: [0,1]</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">TwoSum</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">twoSum</span><span class="p">(</span><span class="n">_</span> <span class="nv">nums</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="n">_</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">dict</span> <span class="o">=</span> <span class="p">[</span><span class="kt">Int</span><span class="p">:</span> <span class="kt">Int</span><span class="p">]()</span>
+  
+        <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span> <span class="k">in</span> <span class="n">nums</span><span class="o">.</span><span class="nf">enumerated</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">lastIndex</span> <span class="o">=</span> <span class="n">dict</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">]</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="p">[</span><span class="n">lastIndex</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span>
+            <span class="p">}</span>
+    
+            <span class="n">dict</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
         <span class="p">}</span>
-        
-        <span class="k">while</span> <span class="n">nonZeroIdx</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
-            <span class="n">nums</span><span class="p">[</span><span class="n">nonZeroIdx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="n">nonZeroIdx</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="p">}</span>
+  
+        <span class="nf">fatalError</span><span class="p">(</span><span class="s">"No valid outputs"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -234,7 +240,7 @@ Output: [0]</p>
   
     
     
-      <a href="//twitter.com/share?text=MoveZeroes&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F25%2FMoveZeroes-copy.html&via=TheBenCentra"
+      <a href="//twitter.com/share?text=TwoSum&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F23%2FTwoSum.html&via=YerinaOh"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
         <i class="fa fa-twitter-square fa-lg"></i>
       </a>
@@ -249,7 +255,7 @@ Output: [0]</p>
     
     
     
-      <a href="//www.facebook.com/sharer.php?t=MoveZeroes&u=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F25%2FMoveZeroes-copy.html"
+      <a href="//www.facebook.com/sharer.php?t=TwoSum&u=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F23%2FTwoSum.html"
         onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
         <i class="fa fa-facebook-square fa-lg"></i>
       </a>
@@ -274,7 +280,7 @@ Output: [0]</p>
     
     
     
-      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F25%2FMoveZeroes-copy.html"
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F23%2FTwoSum.html"
         onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
         <i class="fa fa-linkedin-square fa-lg"></i>
       </a>
@@ -287,7 +293,7 @@ Output: [0]</p>
     
     
     
-      <a href="//plus.google.com/share?title=MoveZeroes&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F25%2FMoveZeroes-copy.html"
+      <a href="//plus.google.com/share?title=TwoSum&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F23%2FTwoSum.html"
         onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
         <i class="fa fa-google-plus-square fa-lg"></i>
       </a>
@@ -321,7 +327,7 @@ Output: [0]</p>
     
     
     
-      <a href="//www.pinterest.com/pin/create/button/?description=MoveZeroes&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F25%2FMoveZeroes-copy.html&media=http://localhost:4000/assets/header_image.jpg"
+      <a href="//www.pinterest.com/pin/create/button/?description=TwoSum&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F23%2FTwoSum.html&media=http://localhost:4000/assets/07.jpg"
         onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
         <i class="fa fa-pinterest-square fa-lg"></i>
       </a>
@@ -390,7 +396,7 @@ Output: [0]</p>
     
     
     
-      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/2021/04/25/MoveZeroes-copy.html') + '&title=MoveZeroes'; return false">
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/algorithm/2021/04/23/TwoSum.html') + '&title=TwoSum'; return false">
         <i class="fa fa-reddit-square fa-lg"></i>
       </a>
     
@@ -419,7 +425,7 @@ Output: [0]</p>
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">Centrarium</h3>
+    <h3 class="footer-heading">Hello, I’m Yerina Oh</h3>
 
     <div class="site-navigation">
 
@@ -481,18 +487,18 @@ Output: [0]</p>
       <p><strong>Contact</strong></p>
       <ul class="social-media-list">
         <li>
-          <a href="mailto:blcentra@gmail.com">
+          <a href="mailto:orina8262@gmail.com">
             <i class="fa fa-envelope-o"></i>
-            <span class="username">blcentra@gmail.com</span>
+            <span class="username">orina8262@gmail.com</span>
           </a>
         </li>
 
         
           
           <li>
-            <a href="https://twitter.com/TheBenCentra" title="Follow me on Twitter">
+            <a href="https://twitter.com/YerinaOh" title="Follow me on Twitter">
               <i class="fa fa-twitter"></i>
-              <span class="username">TheBenCentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -501,18 +507,18 @@ Output: [0]</p>
         
           
           <li>
-            <a href="https://github.com/bencentra" title="Fork me on GitHub">
+            <a href="https://github.com/YerinaOh" title="Fork me on GitHub">
               <i class="fa fa-github"></i>
-              <span class="username">bencentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
         
           
           <li>
-            <a href="https://www.linkedin.com/pub/ben-centra/47/769/60a" title="Connect with me on LinkedIn">
+            <a href="https://www.linkedin.com/pub/YerinaOh" title="Connect with me on LinkedIn">
               <i class="fa fa-linkedin"></i>
-              <span class="username">Ben Centra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -547,7 +553,7 @@ Output: [0]</p>
 
     <div class="site-signature">
       <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
-      <p class="text">A simple yet classy theme for your Jekyll website or blog.
+      <p class="text">talks, and writes about iOS Development, privacy, and Designs
 </p>
     </div>
 

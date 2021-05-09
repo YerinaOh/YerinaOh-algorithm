@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>basic calculator</title>
-  <meta name="description" content="Arrayhttps://leetcode.com/problems/basic-calculator/">
+  <title>ReverseWordsString</title>
+  <meta name="description" content="URLhttps://leetcode.com/problems/reverse-words-in-a-string/">
   
-  <meta name="author" content="Ben Centra">
-  <meta name="copyright" content="&copy; Ben Centra 2021">
+  <meta name="author" content="Yerina Oh">
+  <meta name="copyright" content="&copy; Yerina Oh 2021">
   
 
   <!-- External libraries -->
@@ -41,12 +41,12 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="Arrayhttps://leetcode.com/problems/basic-calculator/" />
-  <meta property="og:url" content="http://localhost:4000/2021/04/15/basic-calculator-copy.html">
-  <meta property="og:site_name" content="Centrarium" />
-  <meta property="og:title" content="basic calculator" />
+  <meta property="og:description" content="URLhttps://leetcode.com/problems/reverse-words-in-a-string/" />
+  <meta property="og:url" content="http://localhost:4000/algorithm/2021/04/19/ReverseWordsString-copy.html">
+  <meta property="og:site_name" content="Hello, I’m Yerina Oh" />
+  <meta property="og:title" content="ReverseWordsString" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image" content="http://localhost:4000/assets/05.jpg" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="612" />
   <meta property="og:image:height" content="605" />
@@ -55,18 +55,18 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="basic calculator">
-  <meta name="twitter:description" content="Arrayhttps://leetcode.com/problems/basic-calculator/">
-  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/2021/04/15/basic-calculator-copy.html">
+  <meta name="twitter:title" content="ReverseWordsString">
+  <meta name="twitter:description" content="URLhttps://leetcode.com/problems/reverse-words-in-a-string/">
+  <meta name="twitter:image" content="http://localhost:4000/assets/05.jpg">
+  <meta name="twitter:url" content="http://localhost:4000/algorithm/2021/04/19/ReverseWordsString-copy.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2021/04/15/basic-calculator-copy.html">
-	<link rel="alternate" type="application/rss+xml" title="Centrarium" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/algorithm/2021/04/19/ReverseWordsString-copy.html">
+	<link rel="alternate" type="application/rss+xml" title="Hello, I’m Yerina Oh" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
 	<script type="text/javascript">
@@ -81,7 +81,7 @@
   <div class="navigation-wrapper">
     <a href="/" class="logo">
       
-      <img src="/assets/logo.png" alt="Centrarium">
+      <img src="/assets/logo.png" alt="Hello, I’m Yerina Oh">
       
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
@@ -146,10 +146,10 @@
     <div class="page-content">
         <div class="post">
 
-<div class="post-header-container " >
-  <div class="scrim ">
+<div class="post-header-container has-cover" style="background-image: url(/assets/05.jpg);">
+  <div class="scrim has-cover">
     <header class="post-header">
-      <h1 class="title">basic calculator</h1>
+      <h1 class="title">ReverseWordsString</h1>
       <p class="info">by <strong></strong></p>
     </header>
   </div>
@@ -157,76 +157,64 @@
 
 <div class="wrapper">
 
- <span class="page-divider">
-  <span class="one"></span>
-  <span class="two"></span>
-</span>
- 
+
 
 <section class="post-meta">
-  <div class="post-date">April 15, 2021</div>
+  <div class="post-date">April 19, 2021</div>
   <div class="post-categories">
+  in 
+    
+    <a href="/category/Algorithm">Algorithm</a>
+    
   
   </div>
 </section>
 
 <article class="post-content">
-  <h2 id="array">Array</h2>
-<p>https://leetcode.com/problems/basic-calculator/</p>
+  <h2 id="url">URL</h2>
+<p>https://leetcode.com/problems/reverse-words-in-a-string/</p>
 
 <h3 id="주요내용">주요내용:</h3>
-<p>Stack으로 문제풀기</p>
+<p>Split으로 문제풀기
+열심히 풀었는데 
+너무 심플하고 정확한 예제가 있어 가져옴!</p>
 
 <h3 id="rule">Rule:</h3>
-<p>문자열 s를 입력하고 평가할 기본 계산기를 구현하기!</p>
+<p>입력 문자열 s가 주어지면 단어의 순서를 반대로합니다. (설명하기가 어렵네유.. 밑에 example 보면 이해가 빠를듯.. 단순 문자를 reverse 하는 게 아닌, 말그대로 Word를 reverse 하고, 공백은 자간만 허용하고..이렇게 생각해야 할 듯.)</p>
 
 <h3 id="constraints">Constraints:</h3>
-<p>1 &lt;= s.length &lt;= 3 * 105
-s consists of digits, ‘+’, ‘-‘, ‘(‘, ‘)’, and ‘ ‘.
-s represents a valid expression.</p>
+<p>1 &lt;= s.length &lt;= 104
+s contains English letters (upper-case and lower-case), digits, and spaces ‘ ‘.
+There is at least one word in s.</p>
 
 <h3 id="time-complexity">time complexity</h3>
 <p>O(n)</p>
 
 <h3 id="example">Example</h3>
 <p>Example 1:
-Input: s = “1 + 1”
-Output: 2</p>
+Input: s = “the sky is blue”
+Output: “blue is sky the”</p>
 
 <p>Example 2:
-Input: s = “ 2-1 + 2 “
-Output: 3</p>
+Input: s = “  hello world  “
+Output: “world hello”</p>
 
 <p>Example 3:
-Input: s = “(1+(4+5+2)-3)+(6+8)”
-Output: 23</p>
+Input: s = “a good   example”
+Output: “example good a”</p>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">BasicCalculator</span> <span class="p">{</span>
-    <span class="kd">func</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
-        <span class="k">var</span> <span class="nv">result</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">var</span> <span class="nv">num</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">var</span> <span class="nv">sign</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">var</span> <span class="nv">stack</span> <span class="o">=</span> <span class="p">[</span><span class="n">sign</span><span class="p">]</span>
-        
-        <span class="k">for</span> <span class="n">char</span> <span class="k">in</span> <span class="n">s</span> <span class="p">{</span>
-            <span class="k">switch</span> <span class="n">char</span> <span class="p">{</span>
-            <span class="k">case</span> <span class="s">"+"</span><span class="p">,</span> <span class="s">"-"</span><span class="p">:</span>
-                <span class="n">result</span> <span class="o">+=</span> <span class="n">num</span> <span class="o">*</span> <span class="n">sign</span>
-                <span class="n">sign</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">last</span><span class="o">!</span> <span class="o">*</span> <span class="p">(</span><span class="n">char</span> <span class="o">==</span> <span class="s">"+"</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-                <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="k">case</span> <span class="s">"("</span><span class="p">:</span>
-                <span class="n">stack</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">sign</span><span class="p">)</span>
-            <span class="k">case</span> <span class="s">")"</span><span class="p">:</span>
-                <span class="n">stack</span><span class="o">.</span><span class="nf">removeLast</span><span class="p">()</span>
-            <span class="k">case</span> <span class="s">" "</span><span class="p">:</span>
-                <span class="k">break</span>
-            <span class="k">default</span><span class="p">:</span>
-                <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">char</span><span class="o">.</span><span class="n">wholeNumberValue</span><span class="o">!</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        
-        <span class="k">return</span> <span class="n">result</span> <span class="o">+</span> <span class="n">num</span> <span class="o">*</span> <span class="n">sign</span>
-    <span class="p">}</span>
+<p>Example 4:
+Input: s = “  Bob    Loves  Alice   “
+Output: “Alice Loves Bob”</p>
+
+<p>Example 5:
+Input: s = “Alice does not even like bob”
+Output: “bob like even not does Alice”</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">ReverseWordsString</span> <span class="p">{</span>
+	<span class="kd">func</span> <span class="nf">reverseWords</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+	  	<span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="nf">split</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span><span class="o">.</span><span class="nf">reversed</span><span class="p">()</span><span class="o">.</span><span class="nf">joined</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span>
+	<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -249,7 +237,7 @@ Output: 23</p>
   
     
     
-      <a href="//twitter.com/share?text=basic+calculator&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F15%2Fbasic-calculator-copy.html&via=TheBenCentra"
+      <a href="//twitter.com/share?text=ReverseWordsString&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F19%2FReverseWordsString-copy.html&via=YerinaOh"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
         <i class="fa fa-twitter-square fa-lg"></i>
       </a>
@@ -264,7 +252,7 @@ Output: 23</p>
     
     
     
-      <a href="//www.facebook.com/sharer.php?t=basic+calculator&u=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F15%2Fbasic-calculator-copy.html"
+      <a href="//www.facebook.com/sharer.php?t=ReverseWordsString&u=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F19%2FReverseWordsString-copy.html"
         onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
         <i class="fa fa-facebook-square fa-lg"></i>
       </a>
@@ -289,7 +277,7 @@ Output: 23</p>
     
     
     
-      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F15%2Fbasic-calculator-copy.html"
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F19%2FReverseWordsString-copy.html"
         onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
         <i class="fa fa-linkedin-square fa-lg"></i>
       </a>
@@ -302,7 +290,7 @@ Output: 23</p>
     
     
     
-      <a href="//plus.google.com/share?title=basic+calculator&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F15%2Fbasic-calculator-copy.html"
+      <a href="//plus.google.com/share?title=ReverseWordsString&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F19%2FReverseWordsString-copy.html"
         onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
         <i class="fa fa-google-plus-square fa-lg"></i>
       </a>
@@ -336,7 +324,7 @@ Output: 23</p>
     
     
     
-      <a href="//www.pinterest.com/pin/create/button/?description=basic+calculator&url=http%3A%2F%2Flocalhost%3A4000%2F2021%2F04%2F15%2Fbasic-calculator-copy.html&media=http://localhost:4000/assets/header_image.jpg"
+      <a href="//www.pinterest.com/pin/create/button/?description=ReverseWordsString&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F04%2F19%2FReverseWordsString-copy.html&media=http://localhost:4000/assets/05.jpg"
         onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
         <i class="fa fa-pinterest-square fa-lg"></i>
       </a>
@@ -405,7 +393,7 @@ Output: 23</p>
     
     
     
-      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/2021/04/15/basic-calculator-copy.html') + '&title=basic calculator'; return false">
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/algorithm/2021/04/19/ReverseWordsString-copy.html') + '&title=ReverseWordsString'; return false">
         <i class="fa fa-reddit-square fa-lg"></i>
       </a>
     
@@ -434,7 +422,7 @@ Output: 23</p>
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">Centrarium</h3>
+    <h3 class="footer-heading">Hello, I’m Yerina Oh</h3>
 
     <div class="site-navigation">
 
@@ -496,18 +484,18 @@ Output: 23</p>
       <p><strong>Contact</strong></p>
       <ul class="social-media-list">
         <li>
-          <a href="mailto:blcentra@gmail.com">
+          <a href="mailto:orina8262@gmail.com">
             <i class="fa fa-envelope-o"></i>
-            <span class="username">blcentra@gmail.com</span>
+            <span class="username">orina8262@gmail.com</span>
           </a>
         </li>
 
         
           
           <li>
-            <a href="https://twitter.com/TheBenCentra" title="Follow me on Twitter">
+            <a href="https://twitter.com/YerinaOh" title="Follow me on Twitter">
               <i class="fa fa-twitter"></i>
-              <span class="username">TheBenCentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -516,18 +504,18 @@ Output: 23</p>
         
           
           <li>
-            <a href="https://github.com/bencentra" title="Fork me on GitHub">
+            <a href="https://github.com/YerinaOh" title="Fork me on GitHub">
               <i class="fa fa-github"></i>
-              <span class="username">bencentra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
         
           
           <li>
-            <a href="https://www.linkedin.com/pub/ben-centra/47/769/60a" title="Connect with me on LinkedIn">
+            <a href="https://www.linkedin.com/pub/YerinaOh" title="Connect with me on LinkedIn">
               <i class="fa fa-linkedin"></i>
-              <span class="username">Ben Centra</span>
+              <span class="username">YerinaOh</span>
             </a>
           </li>
           
@@ -562,7 +550,7 @@ Output: 23</p>
 
     <div class="site-signature">
       <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
-      <p class="text">A simple yet classy theme for your Jekyll website or blog.
+      <p class="text">talks, and writes about iOS Development, privacy, and Designs
 </p>
     </div>
 
