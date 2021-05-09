@@ -2,7 +2,8 @@
 layout: post
 title:  TwoSum
 date:   2021-04-22 23:48:12 +0300
-image:  08.jpg
+categories: Algorithm
+cover:  "/assets/07.jpg"
 tags:   Algorithm
 ---
 

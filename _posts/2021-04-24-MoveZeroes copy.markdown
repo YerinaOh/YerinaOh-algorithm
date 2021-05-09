@@ -2,7 +2,8 @@
 layout: post
 title:  MoveZeroes
 date:   2021-04-24 23:50:12 +0300
-image:  09.jpg
+categories: Algorithm
+cover:  "/assets/08.jpg"
 tags:   Algorithm
 ---
 

@@ -2,7 +2,8 @@
 layout: post
 title:  ClimbingStairs
 date:   2021-04-28 23:26:12 +0300
-image:  01.jpg
+categories: Algorithm
+cover:  "/assets/09.jpg"
 tags:   Algorithm
 ---
 

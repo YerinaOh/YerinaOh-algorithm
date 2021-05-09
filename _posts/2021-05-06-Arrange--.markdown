@@ -2,7 +2,8 @@
 layout: post
 title:  Arrange--
 date:   2021-05-06 23:55:12 +0300
-image:  07.jpg
+categories: Algorithm
+cover:  "/assets/05.jpg"
 tags:   Algorithm
 ---
 

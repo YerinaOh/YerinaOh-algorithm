@@ -2,7 +2,8 @@
 layout: post
 title:  ReverseWordsString
 date:   2021-04-18 23:24:12 +0300
-image:  06.jpg
+categories: Algorithm
+cover:  "/assets/05.jpg"
 tags:   Algorithm
 ---
 

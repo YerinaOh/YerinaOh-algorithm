@@ -2,7 +2,8 @@
 layout: post
 title:  TwoSumLessThanK
 date:   2021-05-02 23:20:12 +0300
-image:  04.jpg
+categories: Algorithm
+cover:  "/assets/02.jpg"
 tags:   Algorithm
 ---
 

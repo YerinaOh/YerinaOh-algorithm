@@ -2,7 +2,8 @@
 layout: post
 title:  JumpGame
 date:   2021-04-20 23:48:12 +0300
-image:  07.jpg
+categories: Algorithm
+cover:  "/assets/06.jpg"
 tags:   Algorithm
 ---
 

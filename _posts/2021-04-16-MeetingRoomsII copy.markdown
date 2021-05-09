@@ -2,7 +2,8 @@
 layout: post
 title:  MeetingRoomsII
 date:   2021-04-16 23:26:12 +0300
-image:  05.jpg
+categories: Algorithm
+cover:  "/assets/04.jpg"
 tags:   Algorithm
 ---
 

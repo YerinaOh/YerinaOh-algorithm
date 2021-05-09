@@ -2,7 +2,8 @@
 layout: post
 title:  PaintFence
 date:   2021-04-29 23:46:12 +0300
-image:  02.jpg
+categories: Algorithm
+cover:  "/assets/10.jpg"
 tags:   Algorithm
 ---
 

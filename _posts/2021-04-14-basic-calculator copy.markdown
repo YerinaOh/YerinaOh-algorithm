@@ -2,7 +2,8 @@
 layout: post
 title:  basic calculator
 date:   2021-04-14 23:42:10 +0300
-image:  04.jpg
+categories: Algorithm
+cover:  "/assets/03.jpg"
 tags:   Algorithm
 ---
 

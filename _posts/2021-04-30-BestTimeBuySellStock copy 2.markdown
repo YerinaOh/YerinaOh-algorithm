@@ -2,7 +2,8 @@
 layout: post
 title:  BestTimeBuySellStock
 date:   2021-04-30 23:57:12 +0300
-image:  03.jpg
+categories: Algorithm
+cover:  "/assets/01.jpg"
 tags:   Algorithm
 ---
 

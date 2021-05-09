@@ -2,7 +2,8 @@
 layout: post
 title:  WiggleSortII
 date:   2021-05-05 23:57:12 +0300
-image:  06.jpg
+categories: Algorithm
+cover:  "/assets/04.jpg"
 tags:   Algorithm
 ---
 

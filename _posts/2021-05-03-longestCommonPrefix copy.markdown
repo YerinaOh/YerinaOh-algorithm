@@ -2,7 +2,8 @@
 layout: post
 title:  longestCommonPrefix
 date:   2021-05-03 23:56:12 +0300
-image:  05.jpg
+categories: Algorithm
+cover:  "/assets/03.jpg"
 tags:   Algorithm
 ---
 
