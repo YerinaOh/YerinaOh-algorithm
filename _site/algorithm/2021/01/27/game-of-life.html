@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Game-of-Life</title>
+  <meta name="description" content="Sorted Arrayhttps://leetcode.com/problems/game-of-life/">
+  
+  <meta name="author" content="Ben Centra">
+  <meta name="copyright" content="&copy; Ben Centra 2021">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Sorted Arrayhttps://leetcode.com/problems/game-of-life/" />
+  <meta property="og:url" content="http://localhost:4000/algorithm/2021/01/27/game-of-life.html">
+  <meta property="og:site_name" content="Centrarium" />
+  <meta property="og:title" content="Game-of-Life" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://localhost:4000/assets/03.jpg" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Game-of-Life">
+  <meta name="twitter:description" content="Sorted Arrayhttps://leetcode.com/problems/game-of-life/">
+  <meta name="twitter:image" content="http://localhost:4000/assets/03.jpg">
+  <meta name="twitter:url" content="http://localhost:4000/algorithm/2021/01/27/game-of-life.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/algorithm/2021/01/27/game-of-life.html">
+	<link rel="alternate" type="application/rss+xml" title="Centrarium" href="http://localhost:4000/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Centrarium">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+	<li class="nav-link"><a href="/typography/">Typography</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/03.jpg);">
+  <div class="scrim has-cover">
+    <header class="post-header">
+      <h1 class="title">Game-of-Life</h1>
+      <p class="info">by <strong></strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+  <div class="post-date">January 27, 2021</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/Algorithm">Algorithm</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h2 id="sorted-array">Sorted Array</h2>
+<p>https://leetcode.com/problems/game-of-life/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>이진배열 탐색하기</p>
+
+<h3 id="rule">Rule:</h3>
+<ol>
+  <li>살아있는 이웃이 두 개 미만인 모든 살아있는 세포는 인구 부족으로 인한 것처럼 죽습니다.</li>
+  <li>2 ~ 3 명의 살아있는 이웃이있는 모든 살아있는 세포는 다음 세대를 위해 살아갑니다.</li>
+  <li>세 개 초과의 살아있는 이웃이있는 모든 살아있는 세포는 인구 과잉처럼 죽습니다.</li>
+  <li>정확히 세 개의 살아있는 이웃이있는 죽은 세포는 마치 번식에 의한 것처럼 살아있는 세포가됩니다.</li>
+</ol>
+
+<h3 id="풀이법-블로그-참고하였음">풀이법 (블로그 참고하였음)</h3>
+
+<p>여기서 다음세대로 갈 때 변경되는 사항들은 아래와같이 정리.</p>
+
+<p>현재 죽음 - 다음 세대 생존 ⇒ 3
+현재 생존 - 다음 세대 죽음 ⇒ 2</p>
+
+<p>Example1:
+Input: board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
+Output: [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]</p>
+
+<p>Example2:
+Input: board = [[1,1],[1,0]]
+Output: [[1,1],[1,1]]</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">UIKit</span>
+
+<span class="kd">class</span> <span class="kt">Solution</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">gameOfLife</span><span class="p">(</span><span class="n">_</span> <span class="nv">board</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]])</span> <span class="p">{</span> <span class="c1">// 2진배열 array</span>
+        <span class="k">guard</span> <span class="n">board</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        
+        <span class="k">let</span> <span class="nv">m</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">board</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">count</span>
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="n">m</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="n">n</span> <span class="p">{</span>
+                <span class="nf">changeStatus</span><span class="p">(</span><span class="o">&amp;</span><span class="n">board</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">board</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nv">$0</span> <span class="o">%</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">changeStatus</span><span class="p">(</span><span class="n">_</span> <span class="nv">board</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]],</span> <span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">j</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">m</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">population</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// next generation 의 값</span>
+    
+        <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">...</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">{</span> <span class="c1">// 앞의 값과 비교</span>
+            <span class="k">for</span> <span class="n">y</span> <span class="k">in</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="o">...</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">{</span> <span class="c1">// 위의 값과 비교</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">m</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="n">n</span> <span class="p">{</span> <span class="c1">// 모서리에 도달하면 contiunue</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="s">"i : </span><span class="se">\(</span><span class="n">i</span><span class="se">)</span><span class="s">, j : </span><span class="se">\(</span><span class="n">j</span><span class="se">)</span><span class="s">,x: </span><span class="se">\(</span><span class="n">x</span><span class="se">)</span><span class="s">,y: </span><span class="se">\(</span><span class="n">y</span><span class="se">)</span><span class="s">, popu:</span><span class="se">\(</span><span class="n">population</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+                    <span class="k">continue</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">i</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">==</span> <span class="n">j</span> <span class="p">{</span> <span class="c1">// 모서리에 도달하면 contiunue</span>
+                    <span class="k">continue</span>
+                <span class="p">}</span>
+                <span class="c1">// 조건 2 : pop이 1이거나 / 2 이면 상태를 변경, 나머지는 유지</span>
+                <span class="n">population</span> <span class="o">=</span> <span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">?</span> <span class="n">population</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">population</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span> <span class="c1">//현재 살아있는 상태</span>
+            <span class="c1">// 조건 1,3 : pop이 가뭄이거나 / 홍수이면 사망으로 설정, 나머지는 생존</span>
+            <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">population</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">population</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="p">?</span> <span class="mi">2</span> <span class="p">:</span> <span class="mi">1</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">//현재 죽어있는 상태</span>
+            <span class="c1">// 조건 4 : 3개의 이웃을 가지고있는 경우는 생존, 이외는 사망</span>
+            <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">population</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">?</span> <span class="mi">3</span> <span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">solution</span> <span class="o">=</span> <span class="kt">Solution</span><span class="o">.</span><span class="nf">init</span><span class="p">()</span>
+<span class="k">var</span> <span class="nv">board</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">solution</span><span class="o">.</span><span class="nf">gameOfLife</span><span class="p">(</span><span class="o">&amp;</span><span class="n">board</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+</code></pre></div></div>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/Algorithm">Algorithm</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=Game-of-Life&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F01%2F27%2Fgame-of-life.html&via=TheBenCentra"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=Game-of-Life&u=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F01%2F27%2Fgame-of-life.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F01%2F27%2Fgame-of-life.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+        <i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=Game-of-Life&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F01%2F27%2Fgame-of-life.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=Game-of-Life&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm%2F2021%2F01%2F27%2Fgame-of-life.html&media=http://localhost:4000/assets/03.jpg"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/algorithm/2021/01/27/game-of-life.html') + '&title=Game-of-Life'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Centrarium</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+	<li class="nav-link"><a href="/typography/">Typography</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:blcentra@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">blcentra@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://twitter.com/TheBenCentra" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">TheBenCentra</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/bencentra" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">bencentra</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://www.linkedin.com/pub/ben-centra/47/769/60a" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">Ben Centra</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">A simple yet classy theme for your Jekyll website or blog.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
