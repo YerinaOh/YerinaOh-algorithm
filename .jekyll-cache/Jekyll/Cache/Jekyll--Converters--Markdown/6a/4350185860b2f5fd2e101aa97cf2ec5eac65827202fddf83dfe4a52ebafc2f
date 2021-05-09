@@ -1,0 +1,48 @@
+I"1<h2 id="url">URL</h2>
+<p>https://leetcode.com/problems/best-time-to-buy-and-sell-stock/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>DP 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>PaintFence</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>1 &lt;= prices.length &lt;= 105
+0 &lt;= prices[i] &lt;= 104</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(n)</p>
+
+<h3 id="example">Example</h3>
+<p>Example 1:</p>
+
+<p>Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+Example 2:</p>
+
+<p>Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transactions are done and the max profit = 0.</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="kt">BestTimeBuySellStock</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">maxProfit</span><span class="p">(</span><span class="nv">prices</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">guard</span> <span class="n">prices</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span><span class="k">return</span> <span class="mi">0</span><span class="p">}</span>
+        <span class="k">var</span> <span class="nv">maxProfit</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">var</span> <span class="nv">buyDay</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">..&lt;</span> <span class="n">prices</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">profit</span> <span class="o">=</span> <span class="n">prices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">prices</span><span class="p">[</span><span class="n">buyDay</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">profit</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+                <span class="n">buyDay</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="p">}</span>
+            <span class="n">maxProfit</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">profit</span><span class="p">,</span> <span class="n">maxProfit</span><span class="p">)</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">maxProfit</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

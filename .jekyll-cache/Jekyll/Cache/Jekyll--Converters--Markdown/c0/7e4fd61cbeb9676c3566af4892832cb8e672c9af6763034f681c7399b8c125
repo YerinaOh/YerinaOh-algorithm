@@ -1,0 +1,85 @@
+I"<hr />
+<!-- 
+### Headings by default:
+
+# This is the default title
+## This is the default title
+### This is the default title
+#### This is the default title
+##### This is the default title
+###### This is the default title
+
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gu">## Heading first level</span>
+<span class="gu">### Heading second level</span>
+<span class="gu">#### Heading third level</span></code></pre></figure>
+
+
+***
+
+### Lists
+
+#### Ordered list example:
+
+1. Poutine drinking vinegar bitters.
+2. Coloring book distillery fanny pack.
+3. Venmo biodiesel gentrify enamel pin meditation.
+4. Jean shorts shaman listicle pickled portland.
+5. Salvia mumblecore brunch iPhone migas.
+
+***
+
+#### Unordered list example:
+
+* Bitters semiotics vice thundercats synth.
+* Literally cred narwhal bitters wayfarers.
+* Kale chips chartreuse paleo tbh street art marfa.
+* Mlkshk polaroid sriracha brooklyn.
+* Pug you probably haven't heard of them air plant man bun.
+
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="p">1.</span> Order list item 1
+<span class="p">2.</span> Order list item 1
+<span class="p">
+*</span> Unordered list item 1
+<span class="p">*</span> Unordered list item 2</code></pre></figure>
+
+
+***
+
+### Quotes
+
+> Coming together is a beginning; keeping together is progress; working together is success. — Edward Everett Hale
+
+***
+
+### Syntax Highlighter
+
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.top</span><span class="dl">'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">html, body</span><span class="dl">'</span><span class="p">).</span><span class="nx">stop</span><span class="p">().</span><span class="nx">animate</span><span class="p">({</span> <span class="na">scrollTop</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span> <span class="dl">'</span><span class="s1">slow</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">swing</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">scroll</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">scrollTop</span><span class="p">()</span> <span class="o">&gt;</span> <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">height</span><span class="p">())</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.top</span><span class="dl">'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="dl">"</span><span class="s2">top-active</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.top</span><span class="dl">'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="dl">"</span><span class="s2">top-active</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">};</span>
+  <span class="p">});</span></code></pre></figure>
+
+
+***
+
+### Videos
+
+<iframe src="https://www.youtube.com/embed/iWowJBRMtpc" frameborder="0" allowfullscreen></iframe>
+
+***
+
+### Images
+
+![](/images/09.jpg)
+*Backyard* -->
+
+<hr />
+:ET

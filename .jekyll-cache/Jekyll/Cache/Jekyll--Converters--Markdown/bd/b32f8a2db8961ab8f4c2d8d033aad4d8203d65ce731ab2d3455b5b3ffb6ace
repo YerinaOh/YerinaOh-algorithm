@@ -1,0 +1,59 @@
+I"<h2 id="array">Array</h2>
+<p>https://leetcode.com/problems/basic-calculator/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>Stack으로 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>문자열 s를 입력하고 평가할 기본 계산기를 구현하기!</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>1 &lt;= s.length &lt;= 3 * 105
+s consists of digits, ‘+’, ‘-‘, ‘(‘, ‘)’, and ‘ ‘.
+s represents a valid expression.</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(n)</p>
+
+<h3 id="example">Example</h3>
+<p>Example 1:
+Input: s = “1 + 1”
+Output: 2</p>
+
+<p>Example 2:
+Input: s = “ 2-1 + 2 “
+Output: 3</p>
+
+<p>Example 3:
+Input: s = “(1+(4+5+2)-3)+(6+8)”
+Output: 23</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">BasicCalculator</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">var</span> <span class="nv">num</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">var</span> <span class="nv">sign</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">var</span> <span class="nv">stack</span> <span class="o">=</span> <span class="p">[</span><span class="n">sign</span><span class="p">]</span>
+        
+        <span class="k">for</span> <span class="n">char</span> <span class="k">in</span> <span class="n">s</span> <span class="p">{</span>
+            <span class="k">switch</span> <span class="n">char</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="s">"+"</span><span class="p">,</span> <span class="s">"-"</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">+=</span> <span class="n">num</span> <span class="o">*</span> <span class="n">sign</span>
+                <span class="n">sign</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">last</span><span class="o">!</span> <span class="o">*</span> <span class="p">(</span><span class="n">char</span> <span class="o">==</span> <span class="s">"+"</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">case</span> <span class="s">"("</span><span class="p">:</span>
+                <span class="n">stack</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">sign</span><span class="p">)</span>
+            <span class="k">case</span> <span class="s">")"</span><span class="p">:</span>
+                <span class="n">stack</span><span class="o">.</span><span class="nf">removeLast</span><span class="p">()</span>
+            <span class="k">case</span> <span class="s">" "</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">char</span><span class="o">.</span><span class="n">wholeNumberValue</span><span class="o">!</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">result</span> <span class="o">+</span> <span class="n">num</span> <span class="o">*</span> <span class="n">sign</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

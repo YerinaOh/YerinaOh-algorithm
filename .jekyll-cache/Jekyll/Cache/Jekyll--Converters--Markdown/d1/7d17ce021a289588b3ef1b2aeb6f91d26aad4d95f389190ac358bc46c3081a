@@ -1,0 +1,48 @@
+I"R<h2 id="url">URL</h2>
+<p>https://leetcode.com/problems/jump-game/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>DP 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>그니까 이게.. 개구리가 점프 가능한지 bool 값으로 return 하라는건데 내용은 이렇구먼..
+음이 아닌 정수 숫자의 배열이 주어지면 처음에 배열의 첫 번째 인덱스에 배치됩니다.
+배열의 각 요소는 해당 위치에서 최대 점프 길이를 나타냅니다.
+마지막 INDEX에 도달 할 수 있는지 확인하십시오.</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>1 &lt;= nums.length &lt;= 3 * 104
+0 &lt;= nums[i] &lt;= 105</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(n)</p>
+
+<h3 id="example">Example</h3>
+<p>Example 1:
+Input: nums = [2,3,1,1,4]
+Output: true
+Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.</p>
+
+<p>Example 2:
+Input: nums = [3,2,1,0,4]
+Output: false
+Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">JumpGame</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">canJump</span><span class="p">(</span><span class="n">_</span> <span class="nv">nums</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">maximumIndex</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="k">for</span> <span class="p">(</span><span class="n">currentIndex</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="n">nums</span><span class="o">.</span><span class="nf">enumerated</span><span class="p">(){</span>
+            
+            <span class="k">if</span> <span class="n">currentIndex</span> <span class="o">&gt;</span> <span class="n">maximumIndex</span><span class="p">{</span>
+                <span class="k">return</span> <span class="kc">false</span>
+            <span class="p">}</span>
+            
+            <span class="n">maximumIndex</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">maximumIndex</span><span class="p">,</span> <span class="n">currentIndex</span> <span class="o">+</span> <span class="n">value</span><span class="p">)</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

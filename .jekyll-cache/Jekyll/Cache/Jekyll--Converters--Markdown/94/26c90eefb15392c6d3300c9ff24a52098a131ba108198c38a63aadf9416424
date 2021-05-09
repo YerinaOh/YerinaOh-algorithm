@@ -1,0 +1,35 @@
+I"�<h2 id="link">Link</h2>
+<p>https://leetcode.com/problems/meeting-rooms-ii/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>Sort 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>Sort start and end separately, then count conflicts</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(nlogn)</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">MeetingRoomsII</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">minMeetingRooms</span><span class="p">(</span><span class="n">_</span> <span class="nv">intervals</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">startingTimes</span> <span class="o">=</span> <span class="n">intervals</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">interval</span> <span class="k">in</span> <span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">}</span><span class="o">.</span><span class="nf">sorted</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">endingTimes</span> <span class="o">=</span> <span class="n">intervals</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">interval</span> <span class="k">in</span> <span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">}</span><span class="o">.</span><span class="nf">sorted</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">intervalsCount</span> <span class="o">=</span> <span class="n">intervals</span><span class="o">.</span><span class="n">count</span>
+        
+        <span class="k">var</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">meetingRoomsNum</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">intervalsCount</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">intervalsCount</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="n">startingTimes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">endingTimes</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">{</span>
+                <span class="n">meetingRoomsNum</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="p">}</span>
+            
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">meetingRoomsNum</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

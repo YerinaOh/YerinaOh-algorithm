@@ -1,0 +1,62 @@
+I"�<h2 id="url">URL</h2>
+<p>https://leetcode.com/problems/paint-fence/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>DP 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>n 개의 기둥이있는 울타리가 있으며 각 기둥은 k 색상 중 하나로 칠할 수 있습니다.
+인접한 두 개 이상의 울타리 기둥이 같은 색을 갖지 않도록 모든 기둥을 페인트해야합니다.
+울타리를 칠할 수있는 총 방법 수를 반환합니다.</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>n과 k는 0이상의 정수입니다. (마이너스가 아님!)</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(n)</p>
+
+<h3 id="example">Example</h3>
+<p>Example 1:</p>
+
+<p>Input: n=3, k=2<br />
+Output: 6
+Explanation:
+          post 1,   post 2, post 3
+    way1    0         0       1 
+    way2    0         1       0
+    way3    0         1       1
+    way4    1         0       0
+    way5    1         0       1
+    way6    1         1       0
+Example 2:</p>
+
+<p>Input: n=2, k=2<br />
+Output: 4
+Explanation:
+          post 1,   post 2
+    way1    0         0     <br />
+    way2    0         1          <br />
+    way3    1         0        <br />
+    way4    1         1</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">PaintFence</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">numWays</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">k</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">k</span>
+        <span class="p">}</span>
+        
+        <span class="k">var</span> <span class="nv">lastSame</span> <span class="o">=</span> <span class="n">k</span>
+        <span class="k">var</span> <span class="nv">lastDiff</span> <span class="o">=</span> <span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">2</span><span class="o">..&lt;</span><span class="n">n</span> <span class="p">{</span>
+            <span class="p">(</span><span class="n">lastSame</span><span class="p">,</span> <span class="n">lastDiff</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">lastDiff</span><span class="p">,</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">lastSame</span> <span class="o">+</span> <span class="n">lastDiff</span><span class="p">))</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">lastSame</span> <span class="o">+</span> <span class="n">lastDiff</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

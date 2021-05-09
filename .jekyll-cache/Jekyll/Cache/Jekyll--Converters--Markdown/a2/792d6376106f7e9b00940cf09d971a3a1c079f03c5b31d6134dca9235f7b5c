@@ -1,0 +1,65 @@
+I"�<h2 id="dp">DP</h2>
+<p>https://leetcode.com/explore/interview/card/top-interview-questions-medium/111/dynamic-programming/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>DP 로 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>1원, 2원, 5원 짜리 동전을 가지고 11원을 만든다
+이 때, 최소 동전의 개수를 구하라
+a(n) = a(n-1)+ a(n-2)</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(N)</p>
+
+<p>Example 1:
+Input: coins = [1,2,5], amount = 11
+Output: 3
+Explanation: 11 = 5 + 5 + 1</p>
+
+<p>Example 2:
+Input: coins = [2], amount = 3
+Output: -1</p>
+
+<p>Example 3:
+Input: coins = [1], amount = 0
+Output: 0</p>
+
+<p>Example 4:
+Input: coins = [1], amount = 1
+Output: 1</p>
+
+<p>Example 5:
+Input: coins = [1], amount = 2
+Output: 2</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="kt">CoinChange</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">coinChange</span><span class="p">(</span><span class="n">_</span> <span class="nv">coins</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="n">_</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">guard</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="p">}</span>
+        
+        <span class="k">let</span> <span class="nv">coins</span> <span class="o">=</span> <span class="n">coins</span><span class="o">.</span><span class="nf">sorted</span><span class="p">()</span>
+        <span class="k">var</span> <span class="nv">minAmounts</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">(</span><span class="nv">repeating</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="n">amount</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">minAmounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">...</span><span class="n">amount</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="n">coin</span> <span class="k">in</span> <span class="n">coins</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="n">coin</span> <span class="o">&gt;</span> <span class="n">i</span> <span class="p">{</span>
+                    <span class="k">break</span>
+                <span class="p">}</span>
+                
+                <span class="k">if</span> <span class="n">minAmounts</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">coin</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">{</span>
+                    <span class="k">continue</span>
+                <span class="p">}</span>
+                
+                <span class="n">minAmounts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">minAmounts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">?</span> <span class="n">minAmounts</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">coin</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="nf">min</span><span class="p">(</span><span class="n">minAmounts</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">coin</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">minAmounts</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">minAmounts</span><span class="p">[</span><span class="n">amount</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

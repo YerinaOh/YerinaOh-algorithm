@@ -1,0 +1,57 @@
+I"p<h2 id="dp">DP</h2>
+<p>https://leetcode.com/explore/featured/card/top-interview-questions-easy/97/dynamic-programming/569/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>DP 로 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>한번 혹은 두번의 걸음으로 정상에 도달할 가지의 수를 구하여라</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>1 &lt;= n &lt;= 45</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(N)</p>
+
+<p>Example 1:
+Input: n = 2
+Output: 2
+Explanation: There are two ways to climb to the top.</p>
+<ol>
+  <li>1 step + 1 step</li>
+  <li>2 steps</li>
+</ol>
+
+<p>Example 2:
+Input: n = 3
+Output: 3
+Explanation: There are three ways to climb to the top.</p>
+<ol>
+  <li>1 step + 1 step + 1 step</li>
+  <li>1 step + 2 steps</li>
+  <li>2 steps + 1 step</li>
+</ol>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">ClimbingStairs</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">climbStairs</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="p">}</span>
+        
+        <span class="k">var</span> <span class="nv">prev</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">post</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">...</span><span class="n">n</span> <span class="p">{</span>
+            <span class="n">total</span> <span class="o">=</span> <span class="n">prev</span> <span class="o">+</span> <span class="n">post</span>
+            
+            <span class="n">prev</span> <span class="o">=</span> <span class="n">post</span>
+            <span class="n">post</span> <span class="o">=</span> <span class="n">total</span>
+        <span class="p">}</span>
+       
+        <span class="k">return</span> <span class="n">total</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

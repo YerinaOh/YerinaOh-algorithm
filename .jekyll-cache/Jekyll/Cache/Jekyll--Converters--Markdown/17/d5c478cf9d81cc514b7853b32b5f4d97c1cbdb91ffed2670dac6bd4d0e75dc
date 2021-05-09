@@ -1,0 +1,54 @@
+I"<h2 id="array">Array</h2>
+<p>https://leetcode.com/problems/triangle/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>DP 로 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>삼각형 배열이 주어지면 위에서 아래로 최소 경로 합계를 반환합니다.</p>
+
+<p>각 단계에 대해 아래 행의 인접한 번호로 이동할 수 있습니다. 보다 공식적으로 현재 행의 인덱스 i에있는 경우 다음 행의 인덱스 i 또는 인덱스 i + 1로 이동할 수 있습니다.</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>1 &lt;= triangle.length &lt;= 200
+triangle[0].length == 1
+triangle[i].length == triangle[i - 1].length + 1
+-104 &lt;= triangle[i][j] &lt;= 104</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(nlogn)</p>
+
+<h3 id="example">Example</h3>
+<p>Example 1:
+Input: triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
+Output: 11
+Explanation: The triangle looks like:
+   2
+  3 4
+ 6 5 7
+4 1 8 3
+The minimum path sum from top to bottom is 2 + 3 + 5 + 1 = 11 (underlined above).</p>
+
+<p>Example 2:
+Input: triangle = [[-10]]
+Output: -10</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">class</span> <span class="kt">Triangle</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">minimumTotal</span><span class="p">(</span><span class="n">_</span> <span class="nv">triangle</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">guard</span> <span class="n">triangle</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="p">}</span>
+        
+        <span class="k">var</span> <span class="nv">dp</span> <span class="o">=</span> <span class="n">triangle</span><span class="o">.</span><span class="n">last</span><span class="o">!</span>
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="nf">stride</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">triangle</span><span class="o">.</span><span class="n">count</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">through</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">by</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">0</span><span class="o">...</span><span class="n">i</span> <span class="p">{</span>
+                <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">triangle</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

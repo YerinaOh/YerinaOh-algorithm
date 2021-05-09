@@ -1,0 +1,48 @@
+I"�<h2 id="url">URL</h2>
+<p>https://leetcode.com/problems/two-sum-less-than-k/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>ARRAY 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>정수 배열 A와 정수 K가 주어지면 A [i] + A [j] = S 및 S &lt;K 인 i &lt;j가 존재하도록 최대 S를 반환합니다.</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(n)</p>
+
+<h3 id="example">Example</h3>
+<p>Example 1:</p>
+
+<p>Input: A = [34,23,1,24,75,33,54,8], K = 60
+Output: 58
+Explanation: 
+We can use 34 and 24 to sum 58 which is less than 60.</p>
+
+<p>Example 2:</p>
+
+<p>Input: A = [10,20,30], K = 15
+Output: -1
+Explanation: 
+In this case it’s not possible to get a pair sum less that 15.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="kt">TwoSumLessThanK</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">twoSumLessThanK</span><span class="p">(</span><span class="n">_</span> <span class="kt">A</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="n">_</span> <span class="kt">K</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">sortedA</span> <span class="o">=</span> <span class="kt">A</span><span class="o">.</span><span class="nf">sorted</span><span class="p">()</span>
+        <span class="k">var</span> <span class="nv">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">sortedA</span><span class="o">.</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">var</span> <span class="nv">closest</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        
+        <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="n">sortedA</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">+</span> <span class="n">sortedA</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">&lt;</span> <span class="kt">K</span> <span class="p">{</span>
+                <span class="n">closest</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">sortedA</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">+</span> <span class="n">sortedA</span><span class="p">[</span><span class="n">right</span><span class="p">],</span> <span class="n">closest</span><span class="p">)</span>
+                <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">closest</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,47 @@
+I"Q	<h2 id="url">URL</h2>
+<p>https://leetcode.com/problems/reverse-words-in-a-string/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>Split으로 문제풀기
+열심히 풀었는데 
+너무 심플하고 정확한 예제가 있어 가져옴!</p>
+
+<h3 id="rule">Rule:</h3>
+<p>입력 문자열 s가 주어지면 단어의 순서를 반대로합니다. (설명하기가 어렵네유.. 밑에 example 보면 이해가 빠를듯.. 단순 문자를 reverse 하는 게 아닌, 말그대로 Word를 reverse 하고, 공백은 자간만 허용하고..이렇게 생각해야 할 듯.)</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>1 &lt;= s.length &lt;= 104
+s contains English letters (upper-case and lower-case), digits, and spaces ‘ ‘.
+There is at least one word in s.</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(n)</p>
+
+<h3 id="example">Example</h3>
+<p>Example 1:
+Input: s = “the sky is blue”
+Output: “blue is sky the”</p>
+
+<p>Example 2:
+Input: s = “  hello world  “
+Output: “world hello”</p>
+
+<p>Example 3:
+Input: s = “a good   example”
+Output: “example good a”</p>
+
+<p>Example 4:
+Input: s = “  Bob    Loves  Alice   “
+Output: “Alice Loves Bob”</p>
+
+<p>Example 5:
+Input: s = “Alice does not even like bob”
+Output: “bob like even not does Alice”</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">ReverseWordsString</span> <span class="p">{</span>
+	<span class="kd">func</span> <span class="nf">reverseWords</span><span class="p">(</span><span class="n">_</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+	  	<span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="nf">split</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span><span class="o">.</span><span class="nf">reversed</span><span class="p">()</span><span class="o">.</span><span class="nf">joined</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

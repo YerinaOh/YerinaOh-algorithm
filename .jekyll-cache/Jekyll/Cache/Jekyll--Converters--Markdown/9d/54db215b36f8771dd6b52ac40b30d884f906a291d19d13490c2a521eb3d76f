@@ -1,0 +1,22 @@
+I"Å<h2 id="sorted-array">Sorted Array</h2>
+
+<h3 id="why-not-indeed">Why not indeed!</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">RemoveDuplicatesFromSortedArray</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">removeDuplicates</span><span class="p">(</span><span class="k">inout</span> <span class="nv">nums</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">guard</span> <span class="n">nums</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="p">}</span>
+        
+        <span class="k">var</span> <span class="nv">index</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">for</span> <span class="n">num</span> <span class="k">in</span> <span class="n">nums</span> <span class="k">where</span> <span class="n">num</span> <span class="o">!=</span> <span class="n">nums</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="p">{</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">nums</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

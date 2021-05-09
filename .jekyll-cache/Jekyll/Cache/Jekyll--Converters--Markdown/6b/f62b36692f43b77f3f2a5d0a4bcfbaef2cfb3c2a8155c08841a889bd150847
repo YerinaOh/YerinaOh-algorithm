@@ -1,0 +1,50 @@
+I"<h2 id="url">URL</h2>
+<p>https://leetcode.com/problems/two-sum/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>ARRAY 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>정수 nums의 배열과 정수 대상이 주어지면 대상에 합산되도록 두 숫자의 인덱스를 반환합니다.
+각 입력에 정확히 하나의 솔루션이 있다고 가정 할 수 있으며 동일한 요소를 두 번 사용할 수 없습니다.</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>2 &lt;= nums.length &lt;= 103
+-109 &lt;= nums[i] &lt;= 109
+-109 &lt;= target &lt;= 109</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(n)</p>
+
+<h3 id="example">Example</h3>
+<p>Example 1:</p>
+
+<p>Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+Example 2:</p>
+
+<p>Input: nums = [3,2,4], target = 6
+Output: [1,2]
+Example 3:</p>
+
+<p>Input: nums = [3,3], target = 6
+Output: [0,1]</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">TwoSum</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">twoSum</span><span class="p">(</span><span class="n">_</span> <span class="nv">nums</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="n">_</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">dict</span> <span class="o">=</span> <span class="p">[</span><span class="kt">Int</span><span class="p">:</span> <span class="kt">Int</span><span class="p">]()</span>
+  
+        <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span> <span class="k">in</span> <span class="n">nums</span><span class="o">.</span><span class="nf">enumerated</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">lastIndex</span> <span class="o">=</span> <span class="n">dict</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">]</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="p">[</span><span class="n">lastIndex</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span>
+            <span class="p">}</span>
+    
+            <span class="n">dict</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="p">}</span>
+  
+        <span class="nf">fatalError</span><span class="p">(</span><span class="s">"No valid outputs"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

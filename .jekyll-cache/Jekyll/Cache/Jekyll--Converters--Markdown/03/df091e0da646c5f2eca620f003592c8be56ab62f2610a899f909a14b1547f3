@@ -1,0 +1,53 @@
+I"�<h2 id="array">Array</h2>
+<p>https://leetcode.com/problems/heaters/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>array 로 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>모든 집을 데우기 위해 따뜻한 반경이 고정 된 표준 히터를 설계하는 것입니다.
+집이 히터의 따뜻한 반경 범위 내에있는 한 모든 집을 데울 수 있습니다.
+가로선에 주택과 히터의 위치가 주어지면 히터의 최소 반경 표준을 반환하여 해당 히터가 모든 주택을 덮을 수 있도록합니다.</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>1 &lt;= houses.length, heaters.length &lt;= 3 * 104
+1 &lt;= houses[i], heaters[i] &lt;= 109</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(nlogn)</p>
+
+<p>Example 1:</p>
+
+<p>Input: houses = [1,2,3], heaters = [2]
+Output: 1
+Explanation: The only heater was placed in the position 2, and if we use the radius 1 standard, then all the houses can be warmed.</p>
+
+<p>Example 2:</p>
+
+<p>Input: houses = [1,2,3,4], heaters = [1,4]
+Output: 1
+Explanation: The two heater was placed in the position 1 and 4. We need to use radius 1 standard, then all the houses can be warmed.</p>
+
+<p>Example 3:</p>
+
+<p>Input: houses = [1,5], heaters = [2]
+Output: 3</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">FindPeakElement</span> <span class="p">{</span>
+  <span class="kd">func</span> <span class="nf">findRadius</span><span class="p">(</span><span class="n">_</span> <span class="nv">houses</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="n">_</span> <span class="nv">heaters</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">radius</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">let</span> <span class="nv">houses</span> <span class="o">=</span> <span class="n">houses</span><span class="o">.</span><span class="nf">sorted</span><span class="p">(),</span> <span class="n">heaters</span> <span class="o">=</span> <span class="n">heaters</span><span class="o">.</span><span class="nf">sorted</span><span class="p">()</span>
+        
+        <span class="k">for</span> <span class="n">house</span> <span class="k">in</span> <span class="n">houses</span> <span class="p">{</span>
+            <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">heaters</span><span class="o">.</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">house</span> <span class="o">&gt;=</span> <span class="n">heaters</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">heaters</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>  <span class="p">{</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="p">}</span>
+            
+            <span class="n">radius</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="nf">abs</span><span class="p">(</span><span class="n">house</span> <span class="o">-</span> <span class="n">heaters</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">radius</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,60 @@
+I"g<h2 id="url">URL</h2>
+<p>https://leetcode.com/problems/wiggle-sort-ii/</p>
+
+<h3 id="주요내용">주요내용:</h3>
+<p>Stack 문제풀기</p>
+
+<h3 id="rule">Rule:</h3>
+<p>문자열 경로가 주어지면 이를 단순화 된 표준 경로로 변환하십시오.</p>
+
+<p>Unix 파일 시스템에서 마침표 ‘.’ 현재 디렉토리를 나타내며, 이중 마침표 ‘..’는 한 수준 위로 디렉토리를 나타내며, 여러 연속 슬래시 (예 : ‘//’)는 단일 슬래시 ‘/’로 처리됩니다. 이 문제의 경우 ‘…‘와 같은 다른 형식의 마침표는 파일 / 디렉토리 이름으로 처리됩니다.</p>
+
+<h3 id="constraints">Constraints:</h3>
+<p>1 &lt;= path.length &lt;= 3000
+path consists of English letters, digits, period ‘.’, slash ‘/’ or ‘_’.
+path is a valid absolute Unix path.</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>O(n)</p>
+
+<h3 id="example">Example</h3>
+<p>Example 1:</p>
+
+<p>Input: path = “/home/”
+Output: “/home”
+Explanation: Note that there is no trailing slash after the last directory name.
+Example 2:</p>
+
+<p>Input: path = “/../”
+Output: “/”
+Explanation: Going one level up from the root directory is a no-op, as the root level is the highest level you can go.
+Example 3:</p>
+
+<p>Input: path = “/home//foo/”
+Output: “/home/foo”
+Explanation: In the canonical path, multiple consecutive slashes are replaced by a single one.
+Example 4: ;</p>
+
+<p>Input: path = “/a/./b/../../c/”
+Output: “/c”</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="kt">SimplifyPath</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">simplifyPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">directories</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">]()</span>
+        <span class="k">let</span> <span class="nv">components</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="nf">split</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">"/"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">component</span> <span class="k">in</span> <span class="n">components</span> <span class="p">{</span>
+            <span class="k">switch</span> <span class="n">component</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="s">""</span><span class="p">:</span> <span class="k">break</span> <span class="c1">// do nothing</span>
+            <span class="k">case</span> <span class="s">"."</span><span class="p">:</span> <span class="k">break</span> <span class="c1">// do nothing, pointing to the current directory</span>
+            <span class="k">case</span> <span class="s">".."</span><span class="p">:</span>
+                <span class="n">directories</span><span class="o">.</span><span class="nf">popLast</span><span class="p">()</span> <span class="c1">// if empty, does nothing</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="n">directories</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="n">component</span><span class="p">))</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="s">"/"</span> <span class="o">+</span> <span class="kt">String</span><span class="p">(</span><span class="n">directories</span><span class="o">.</span><span class="nf">joined</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">"/"</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

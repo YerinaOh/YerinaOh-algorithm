@@ -1,0 +1,12 @@
+I"�<h3 id="주요내용">주요내용:</h3>
+<p>알고리즘 풀기 목적이었으나.. 지금은 정리가 필요할 때</p>
+
+<h3 id="time-complexity">time complexity</h3>
+<p>Sort - O(nlogn)
+Array - O(n)
+DP - O(n)</p>
+
+<p>Sort - 재귀 , 병렬 loop 사용. quick sort 는 어렵지만 bubble, swap 이용하여 풀기
+Array - loop 로 푸는편 index 값 비교하기
+DP - 점화식 세우는 것이 가장 중요. index 값 비교하기</p>
+:ET

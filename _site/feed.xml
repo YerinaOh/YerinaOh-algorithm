@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Centrarium</title>
+    <description>A simple yet classy theme for your Jekyll website or blog.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 10 May 2021 01:23:57 +0900</pubDate>
+    <lastBuildDate>Mon, 10 May 2021 01:23:57 +0900</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>SimplifyPath</title>
+        <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/wiggle-sort-ii/&lt;/p&gt; &lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;Stack 문제풀기&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;문자열 경로가 주어지면 이를 단순화 된 표준 경로로 변환하십시오.&lt;/p&gt; &lt;p&gt;Unix 파일 시스템에서 마침표 ‘.’ 현재 디렉토리를 나타내며, 이중 마침표 ‘..’는 한...</description>
+        <pubDate>Sun, 09 May 2021 05:57:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/05/09/SimplifyPath.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/05/09/SimplifyPath.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Arrange--</title>
+        <description>&lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;알고리즘 풀기 목적이었으나.. 지금은 정리가 필요할 때&lt;/p&gt; &lt;h3 id=&quot;time-complexity&quot;&gt;time complexity&lt;/h3&gt; &lt;p&gt;Sort - O(nlogn) Array - O(n) DP - O(n)&lt;/p&gt; &lt;p&gt;Sort - 재귀 , 병렬 loop 사용. quick sort...</description>
+        <pubDate>Fri, 07 May 2021 05:55:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/05/07/Arrange.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/05/07/Arrange.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>WiggleSortII</title>
+        <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/wiggle-sort-ii/&lt;/p&gt; &lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;Sort 문제풀기&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;정수 배열 nums가 주어지면 nums [0] &amp;lt;nums [1]&amp;gt; nums [2] &amp;lt;nums [3] ….이되도록 재정렬하십시오.&lt;/p&gt; &lt;h3 id=&quot;constraints&quot;&gt;Constraints:&lt;/h3&gt; &lt;p&gt;1 &amp;lt;= nums.length &amp;lt;= 5...</description>
+        <pubDate>Thu, 06 May 2021 05:57:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/05/06/WiggleSortII-copy-2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/05/06/WiggleSortII-copy-2.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>longestCommonPrefix</title>
+        <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/longest-common-prefix/submissions/&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;서로 다른 문자열들이 공유하는 가장 긴 접두사를 찾기.&lt;/p&gt; &lt;h3 id=&quot;time-complexity&quot;&gt;time complexity&lt;/h3&gt; &lt;p&gt;O(n)&lt;/p&gt; &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;longestCommonPrefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;function&lt;/span&gt;&lt;span...</description>
+        <pubDate>Tue, 04 May 2021 05:56:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/05/04/longestCommonPrefix-copy.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/05/04/longestCommonPrefix-copy.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>TwoSumLessThanK</title>
+        <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/two-sum-less-than-k/&lt;/p&gt; &lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;ARRAY 문제풀기&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;정수 배열 A와 정수 K가 주어지면 A [i] + A [j] = S 및 S &amp;lt;K 인 i &amp;lt;j가 존재하도록 최대...</description>
+        <pubDate>Mon, 03 May 2021 05:20:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/05/03/TwoSumLessThanK-copy.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/05/03/TwoSumLessThanK-copy.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>BestTimeBuySellStock</title>
+        <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/best-time-to-buy-and-sell-stock/&lt;/p&gt; &lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;DP 문제풀기&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;PaintFence&lt;/p&gt; &lt;h3 id=&quot;constraints&quot;&gt;Constraints:&lt;/h3&gt; &lt;p&gt;1 &amp;lt;= prices.length &amp;lt;= 105 0 &amp;lt;= prices[i] &amp;lt;= 104&lt;/p&gt; &lt;h3 id=&quot;time-complexity&quot;&gt;time complexity&lt;/h3&gt; &lt;p&gt;O(n)&lt;/p&gt; &lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt; &lt;p&gt;Example 1:&lt;/p&gt;...</description>
+        <pubDate>Sat, 01 May 2021 05:57:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/05/01/BestTimeBuySellStock-copy-2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/05/01/BestTimeBuySellStock-copy-2.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>PaintFence</title>
+        <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/paint-fence/&lt;/p&gt; &lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;DP 문제풀기&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;n 개의 기둥이있는 울타리가 있으며 각 기둥은 k 색상 중 하나로 칠할 수 있습니다. 인접한 두 개 이상의 울타리 기둥이 같은...</description>
+        <pubDate>Fri, 30 Apr 2021 05:46:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/04/30/PaintFence-copy.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/04/30/PaintFence-copy.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>ClimbingStairs</title>
+        <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/climbing-stairs/&lt;/p&gt; &lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;DP 문제풀기&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;계단을 오르고 있습니다. 정상에 도달하려면 n 단계가 필요합니다. 매번 1 단계 또는 2 단계를 오를 수 있습니다. 얼마나 많은 방법으로 정상에...</description>
+        <pubDate>Thu, 29 Apr 2021 05:26:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/04/29/ClimbingStairs-copy.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/04/29/ClimbingStairs-copy.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>MoveZeroes</title>
+        <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/move-zeroes/&lt;/p&gt; &lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;ARRAY 문제풀기&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;정수 배열 번호가 주어지면 0이 아닌 요소의 상대적 순서를 유지하면서 모두 0을 끝으로 이동합니다.&lt;/p&gt; &lt;h3 id=&quot;constraints&quot;&gt;Constraints:&lt;/h3&gt; &lt;p&gt;1 &amp;lt;= nums.length &amp;lt;= 104...</description>
+        <pubDate>Sun, 25 Apr 2021 05:50:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/04/25/MoveZeroes-copy.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/04/25/MoveZeroes-copy.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>TwoSum</title>
+        <description>&lt;h2 id=&quot;url&quot;&gt;URL&lt;/h2&gt; &lt;p&gt;https://leetcode.com/problems/two-sum/&lt;/p&gt; &lt;h3 id=&quot;주요내용&quot;&gt;주요내용:&lt;/h3&gt; &lt;p&gt;ARRAY 문제풀기&lt;/p&gt; &lt;h3 id=&quot;rule&quot;&gt;Rule:&lt;/h3&gt; &lt;p&gt;정수 nums의 배열과 정수 대상이 주어지면 대상에 합산되도록 두 숫자의 인덱스를 반환합니다. 각 입력에 정확히 하나의 솔루션이 있다고 가정 할 수...</description>
+        <pubDate>Fri, 23 Apr 2021 05:48:12 +0900</pubDate>
+        <link>http://localhost:4000/2021/04/23/TwoSum.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/04/23/TwoSum.html</guid>
+        
+        <category>Algorithm</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
