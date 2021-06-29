@@ -5,7 +5,7 @@ date:   2021-06-26T00:25:52-05:00
 author: Yerina Oh
 categories: Development
 tags:	Development
-cover:  "/assets/02.png"
+cover:  "/assets/02.png" 
 ---
 
 ## URL
